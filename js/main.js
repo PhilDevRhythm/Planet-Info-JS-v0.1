@@ -28,7 +28,7 @@ alert(Array1[1]);
 */
 
 //CLASES 2 - IF - ELSE
-
+/*
 let Employee = [prompt("Ingrese el nombre del empleado")];
 let VarEmployee = [Employee]
 alert(VarEmployee)
@@ -47,6 +47,48 @@ if (isEqual = true){
 
 alert(Employees)
 alert("POSTIF")
+*/
+
+//CLASES 3 - FOR - WHILE- DO...WHILE - SWITCH
+
+/*for(let i = 0; i < 6; i++){
+    console.log(i);}
+
+
+let numero = parseInt(prompt("Ingresar el numero"));
+
+for (let i = 0; i <= 10; i++){
+    let resultado = numero * i;
+    let mensaje = `${numero} * ${i} = ${resultado}`;
+    alert(mensaje);
+}
+*/
+
+/*for(let turno = 1; turno <= 6; turno++){
+    let nombre = prompt("Ingrese su nombre");
+    let mensaje = `Turno # ${turno} nOMBRE${nombre}`;
+    alert(mensaje);
+}
+alert("Ya no quedan numeros")
+*/
+
+let username = prompt("Ingrese nombre de User");
+let password = "password";
+while (username != "Phil") {
+    alert("User is not on system")
+    username = prompt("Ingrese nombre de User");
+    break;
+};
+password = prompt("Ingrese su password")
+while (password != "password"); {
+    alert("Password Incorrecto")
+    password = prompt("Ingrese su password");
+}
+alert("Acceso Correcto");
+
+
+
+
 
 
 
