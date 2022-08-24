@@ -71,7 +71,7 @@ for (let i = 0; i <= 10; i++){
 }
 alert("Ya no quedan numeros")
 */
-
+/*
 let username = prompt("Ingrese nombre de User");
 let password = "password";
 while (username != "Phil") {
@@ -85,6 +85,67 @@ while (password != "password"); {
     password = prompt("Ingrese su password");
 }
 alert("Acceso Correcto");
+*/
+
+//CLASE 4 FUNCIONES
+
+/*
+let incrementoPrecios = prompt("¿% de Inflacion mensual?");
+let resultado = 0;
+precios(incrementoPrecios);
+function precios(porc1) {
+    resultado = (5990 * (porc1 / 100));
+    alert("Function applied y el resultado es " + resultado)
+    alert(resultado)
+    alert(porc1)
+}
+
+*/
+
+/*
+
+let num1 = prompt("Numero 1?")
+let operacion = prompt("Operacion?")
+let num2 = prompt("Numero 2?")
+let resultado = calculadora(num1, operacion, num2)
+
+function calculadora(num1, operacion, num2) {
+    switch (operacion) {
+        case "+":
+            return num1 + num2;
+            break;
+        case "-":
+            return num1 - num2;
+            break;
+        case "*":
+            return num1 * num2;
+            break;
+        case "/":
+            return num1 / num2;
+            break;
+        default:
+            return "ERROR"
+            break;
+    }
+}
+
+alert(resultado)
+
+*/
+//ARROW FUNCTION
+
+let nombre = prompt("ingrese el nombre");
+let apellido = prompt("ingrese el apellido");
+
+function ingresoNombre(nombre, apellido){
+    alert(`${nombre} + ${apellido}`);
+}  
+alert(ingresoNombre());
+
+
+
+
+
 
 
 
