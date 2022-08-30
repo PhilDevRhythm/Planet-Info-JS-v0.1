@@ -1,11 +1,11 @@
-let number = 9 //prompt("Ingresa un numero para ver si es divisible por 9 exacto")
+
+let number = /*Tu numero aqui-->*/ 180;
 let divisionPor9 = number / 9;
 let resultFinalTest = divisionPor9 - Math.floor(divisionPor9);
-let numberPlus = number + 1;
 
 divisionCheck = Math.floor(divisionPor9);
 
-console.log("Test division");
+/*console.log("Test division");
 console.log(divisionCheck);
 console.log("Test numero");
 console.log(number);
@@ -13,24 +13,22 @@ console.log("Tests division por 9");
 console.log(divisionPor9);
 console.log("Test Resultado");
 console.log(resultFinalTest);
-console.log("--------------------------------------------------");
+*/
+
 console.log("Resultado");
-
 console.log("--------------------------------------------------");
+if (resultFinalTest !== 0) {
+    console.log("Numero no es divisible por 9");
+    //alert("Numero no es divisible por 9")
 
-for (let number = 0; number <= numberPlus; number++){
-    
-    console.log(number)
-    if (resultFinalTest !== 0) {
-        console.log("Numero tiene decimal");
-        
-    } else {
-        console.log("Numero Entero");
-        
-    }
-} 
+} else {
+    console.log("Numero es divisible por 9");
+    console.log("--------------------------------------------------");
+    console.log("Tu numero es igual a 9 x " + divisionPor9 + " veces");
+    //alert("Numero es divisible por 9")
 
-
+}
+console.log("--------------------------------------------------");
 
 
 
