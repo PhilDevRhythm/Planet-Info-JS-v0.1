@@ -12,13 +12,13 @@ class Planets {
         console.log(this.sats)
         console.log("Planeta tiene vida?: ");
         console.log(this.vida)
-        alert(`            Planeta "${this.nombre}" 
+        /*alert(`            Planeta "${this.nombre}" 
             Cantidad de Satelites "${this.sats}"
-            Planeta tiene vida? "${this.vida}"`);
+            Planeta tiene vida? "${this.vida}"`);*/
     }
 }
 
-planetInput = prompt("Ingresa el planeta del cual quieres información");
+planetInput = "jupiter";//prompt("Ingresa el planeta del cual quieres información");
 
 const SolarSystem1 = new Planets("Mercurio", 0, "NO");
 const SolarSystem2 = new Planets("Venus", 0, "NO");
@@ -56,7 +56,7 @@ switch (planetInput) {
         break;
     default:
         console.log("Planeta no existe, intente de nuevo");
-        alert("Planeta no existe, intente de nuevo");
+        /*alert("Planeta no existe, intente de nuevo");*/
         break;
 }
 
