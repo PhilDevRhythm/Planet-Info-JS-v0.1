@@ -35,7 +35,7 @@ class Planets {
             console.log("--------------------------------------");
         } else if ((this.distance * 150) == 150) {
             console.log("--------------------------------------");
-            console.log("Estas aqui");
+            console.log("La distancia es 0, ya que estas aqui");
             console.log("--------------------------------------");
         } else {
             console.log("--------------------------------------");
@@ -47,7 +47,7 @@ class Planets {
 
 //USER PROMPT//
 
-var userPlanetInput = "";//prompt("Ingresa el planeta del cual quieres información");
+var userPlanetInput = "jupiter";//prompt("Ingresa el planeta del cual quieres información");
 var planetInput = userPlanetInput.toLowerCase();
 
 //TEST console.log(planetInput);
@@ -91,7 +91,6 @@ switch (planetInput) {
         SolarSystem8.informar(SolarSystem8)
         break;
     default:
-        console.log("Planeta no existe, intente de nuevo");
+        console.log("Planeta no existe, ingresalo en la seccion //USER PROMPT// entre las comillas");
         /*alert("Planeta no existe, intente de nuevo");*/
-        break;
 }
