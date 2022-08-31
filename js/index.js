@@ -1,33 +1,63 @@
 class Planets {
-    constructor(nombre, sats, vida) {
+    constructor(nombre, sats, vida, distance) {
         this.nombre = nombre;
         this.sats = sats;
         this.vida = vida;
+        this.distance = distance;
     }
 
     informar() {
         console.log("Planeta: ")
+        console.log("--------------------------------------");
         console.log(this.nombre)
+        console.log("");
+        console.log("--------------------------------------");
         console.log("Cantidad de Satelites");
+        console.log("--------------------------------------");
         console.log(this.sats)
+        console.log("");
+        console.log("--------------------------------------");
         console.log("Planeta tiene vida?: ");
+        console.log("--------------------------------------");
         console.log(this.vida)
-        /*alert(`            Planeta "${this.nombre}" 
-            Cantidad de Satelites "${this.sats}"
-            Planeta tiene vida? "${this.vida}"`);*/
+        console.log("");
+        console.log("--------------------------------------");
+        console.log("A que distancia esta del SOL?: ");
+        console.log("--------------------------------------");
+        console.log("Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas");
+        console.log("");
+
+        if ((this.distance * 150) > 200) {
+            console.log("--------------------------------------");
+            console.log("El planeta esta muy lejos para una visita humana");
+            console.log("--------------------------------------");
+        } else if ((this.distance * 150) == 150) {
+            console.log("--------------------------------------");
+            console.log("Estas aqui");
+            console.log("--------------------------------------");
+        } else {
+            console.log("--------------------------------------");
+            console.log("Un viaje tomaria menos de 1 año, podria ser viable")
+            console.log("--------------------------------------");
+        }
     }
 }
 
-planetInput = "jupiter";//prompt("Ingresa el planeta del cual quieres información");
+//USER PROMPT//
 
-const SolarSystem1 = new Planets("Mercurio", 0, "NO");
-const SolarSystem2 = new Planets("Venus", 0, "NO");
-const SolarSystem3 = new Planets("Tierra", 1, "SI");
-const SolarSystem4 = new Planets("Marte", 2, "NO");
-const SolarSystem5 = new Planets("Jupiter", 64, "NO");
-const SolarSystem6 = new Planets("Saturno", 56, "NO");
-const SolarSystem7 = new Planets("Urano", 9, "NO");
-const SolarSystem8 = new Planets("Neptuno", 13, "NO");
+var userPlanetInput = "tierra";//prompt("Ingresa el planeta del cual quieres información");
+var planetInput = userPlanetInput.toLowerCase();
+
+//console.log(planetInput);
+
+const SolarSystem1 = new Planets("Mercurio", 0, "NO", 0.39);
+const SolarSystem2 = new Planets("Venus", 0, "NO", 0.72);
+const SolarSystem3 = new Planets("Tierra", 1, "SI", 1);
+const SolarSystem4 = new Planets("Marte", 2, "NO", 1.52);
+const SolarSystem5 = new Planets("Jupiter", 79, "NO", 5.20);
+const SolarSystem6 = new Planets("Saturno", 82, "NO", 9.58);
+const SolarSystem7 = new Planets("Urano", 27, "NO", 19.23);
+const SolarSystem8 = new Planets("Neptuno", 14, "NO", 30.1);
 
 switch (planetInput) {
     case "mercurio":
@@ -59,6 +89,9 @@ switch (planetInput) {
         /*alert("Planeta no existe, intente de nuevo");*/
         break;
 }
+
+
+
 
 
 
