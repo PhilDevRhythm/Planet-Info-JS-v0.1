@@ -1,3 +1,5 @@
+// FUNCION CONSTRUCTORA
+
 class Planets {
     constructor(nombre, sats, vida, distance) {
         this.nombre = nombre;
@@ -5,7 +7,7 @@ class Planets {
         this.vida = vida;
         this.distance = distance;
     }
-
+// FUNCION INFORMAR()
     informar() {
         console.log("Planeta: ")
         console.log("--------------------------------------");
@@ -45,10 +47,12 @@ class Planets {
 
 //USER PROMPT//
 
-var userPlanetInput = "tierra";//prompt("Ingresa el planeta del cual quieres información");
+var userPlanetInput = "";//prompt("Ingresa el planeta del cual quieres información");
 var planetInput = userPlanetInput.toLowerCase();
 
-//console.log(planetInput);
+//TEST console.log(planetInput);
+
+//Constantes para funcion constructora
 
 const SolarSystem1 = new Planets("Mercurio", 0, "NO", 0.39);
 const SolarSystem2 = new Planets("Venus", 0, "NO", 0.72);
@@ -58,6 +62,8 @@ const SolarSystem5 = new Planets("Jupiter", 79, "NO", 5.20);
 const SolarSystem6 = new Planets("Saturno", 82, "NO", 9.58);
 const SolarSystem7 = new Planets("Urano", 27, "NO", 19.23);
 const SolarSystem8 = new Planets("Neptuno", 14, "NO", 30.1);
+
+//ELECCION DE PLANETA
 
 switch (planetInput) {
     case "mercurio":
@@ -89,10 +95,3 @@ switch (planetInput) {
         /*alert("Planeta no existe, intente de nuevo");*/
         break;
 }
-
-
-
-
-
-
-
