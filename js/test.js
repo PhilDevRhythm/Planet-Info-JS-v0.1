@@ -1,5 +1,3 @@
-// FUNCION CONSTRUCTORA
-
 class Planets {
     constructor(nombre, sats, vida, distance) {
         this.nombre = nombre;
@@ -11,45 +9,45 @@ class Planets {
     informar() {
         console.log("Planeta: ")
         console.log(this.nombre)
-        alert("Elegiste el planeta: " + this.nombre)
+        // alert("Elegiste el planeta: " + this.nombre)
         
 
         console.log("Cantidad de Satelites");
-        alert("Cantidad de Satelites: " + this.sats)
+        // alert("Cantidad de Satelites: " + this.sats)
 
         console.log(this.sats)
     
         console.log("Planeta tiene vida?: ");
-        alert("Planeta tiene vida?: " + this.vida)
+        // alert("Planeta tiene vida?: " + this.vida)
 
         console.log(this.vida)
     
         console.log("A que distancia esta del SOL?: ");
 
         console.log("Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas");
-        alert("A que distancia esta del SOL?: " + "Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas")
+        // alert("A que distancia esta del SOL?: " + "Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas")
 
         if ((this.distance * 150) > 200) {
 
             console.log("El planeta esta muy lejos para una visita humana");
-            alert("El planeta esta muy lejos para una visita humana")
+            // alert("El planeta esta muy lejos para una visita humana")
 
         } else if ((this.distance * 150) == 150) {
 
             console.log("En este caso no es valido un viaje interestelar");
-            alert("En este caso no es valido un viaje interestelar");
+            // alert("En este caso no es valido un viaje interestelar");
 
         } else {
 
             console.log("Un viaje tomaria menos de 1 año, podria ser viable")
-            alert("Un viaje tomaria menos de 1 año, podria ser viable")
+            // alert("Un viaje tomaria menos de 1 año, podria ser viable")
         }
     }
 }
 
 //USER PROMPT//
 
-var userPlanetInput = prompt("Ingresa el planeta del cual quieres información");
+var userPlanetInput = "venus"//prompt("Ingresa el planeta del cual quieres información");
 var planetInput = userPlanetInput.toLowerCase();
 
 //Constantes para funcion constructora
@@ -62,6 +60,9 @@ const SolarSystem5 = new Planets("Jupiter", 79, "NO", 5.20);
 const SolarSystem6 = new Planets("Saturno", 82, "NO", 9.58);
 const SolarSystem7 = new Planets("Urano", 27, "NO", 19.23);
 const SolarSystem8 = new Planets("Neptuno", 14, "NO", 30.1);
+
+
+
 
 //ELECCION DE PLANETA
 
@@ -91,11 +92,10 @@ switch (planetInput) {
         SolarSystem8.informar(SolarSystem8)
         break;
     default:
-        alert("Planeta no existe, ingresalo en la seccion //USER PROMPT// entre las comillas");
-    
+        // alert("Planeta no existe, ingresalo en la seccion //USER PROMPT// entre las comillas");
 }
 
-//ARRAY
+//AUXILIAR FILTER
 
 const SolarSystem = [
     {nombre : "Mercurio", Sats : 0, vida : "NO", distance : 0.39},
@@ -108,16 +108,13 @@ const SolarSystem = [
     {nombre : "Neptuno", Sats : 14, vida : "NO", distance : 30.1}
 ]
 
-
-//FILTER
-
-let userDistance =  prompt("Ingresa la distancia desde el sol que deseas filtrar") / 150
+let userDistance = 500 / 150 /*prompt("Ingresa la distancia desde el sol que deseas filtrar")*/
 console.log(SolarSystem);
 const orderDistance = SolarSystem.filter(nombre => nombre.distance > userDistance);
 console.log(orderDistance);
 const mapDistance = orderDistance.map(distance => distance.nombre);
 console.log(mapDistance)
-alert("Los siguientes planetas estan a una distancia mayor a la que ingresaste " + mapDistance)
+// alert("Los siguientes planetas estan a una distancia mayor a la que ingresaste" + mapDistance)
 
 //BUSQUEDA
 
@@ -127,8 +124,8 @@ if (preguntaSats == "si"){
     console.log(tieneSats);
     let siTieneSats = tieneSats.map(sats => sats.nombre);
     console.log(siTieneSats);
-    alert("Estos planetas tiene satelites" + siTieneSats)
+    alert(siTieneSats)
 }else{
-        alert("OK")
+        // alert("OK")
         console.log("OK");
     }
