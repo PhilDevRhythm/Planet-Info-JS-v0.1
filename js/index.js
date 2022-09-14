@@ -12,18 +12,18 @@ class Planets {
         console.log("Planeta: ")
         console.log(this.nombre)
         alert("Elegiste el planeta: " + this.nombre)
-        
+
 
         console.log("Cantidad de Satelites");
         alert("Cantidad de Satelites: " + this.sats)
 
         console.log(this.sats)
-    
+
         console.log("Planeta tiene vida?: ");
         alert("Planeta tiene vida?: " + this.vida)
 
         console.log(this.vida)
-    
+
         console.log("A que distancia esta del SOL?: ");
 
         console.log("Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas");
@@ -92,26 +92,26 @@ switch (planetInput) {
         break;
     default:
         alert("Planeta no existe, ingresalo en la seccion //USER PROMPT// entre las comillas");
-    
+
 }
 
 //ARRAY
 
 const SolarSystem = [
-    {nombre : "Mercurio", Sats : 0, vida : "NO", distance : 0.39},
-    {nombre : "Venus", Sats : 0, vida : "NO", distance : 0.72},
-    {nombre : "Tierra", Sats : 1, vida : "SI", distance : 1},
-    {nombre : "Marte", Sats : 2, vida : "NO", distance : 1.52},
-    {nombre : "Jupiter", Sats : 79, vida : "NO", distance : 5.20},
-    {nombre : "Saturno",Sats : 82, vida : "NO", distance : 9.58},
-    {nombre : "Urano", Sats : 27, vida : "NO", distance : 19.23},
-    {nombre : "Neptuno", Sats : 14, vida : "NO", distance : 30.1}
+    { nombre: "Mercurio", Sats: 0, vida: "NO", distance: 0.39 },
+    { nombre: "Venus", Sats: 0, vida: "NO", distance: 0.72 },
+    { nombre: "Tierra", Sats: 1, vida: "SI", distance: 1 },
+    { nombre: "Marte", Sats: 2, vida: "NO", distance: 1.52 },
+    { nombre: "Jupiter", Sats: 79, vida: "NO", distance: 5.20 },
+    { nombre: "Saturno", Sats: 82, vida: "NO", distance: 9.58 },
+    { nombre: "Urano", Sats: 27, vida: "NO", distance: 19.23 },
+    { nombre: "Neptuno", Sats: 14, vida: "NO", distance: 30.1 }
 ]
 
 
 //FILTER
 
-let userDistance =  prompt("Ingresa la distancia desde el sol que deseas filtrar") / 150
+let userDistance = prompt("Ingresa la distancia desde el sol que deseas filtrar") / 150
 console.log(SolarSystem);
 const orderDistance = SolarSystem.filter(nombre => nombre.distance > userDistance);
 console.log(orderDistance);
@@ -123,12 +123,25 @@ alert("Los siguientes planetas estan a una distancia mayor a la que ingresaste "
 
 let preguntaSats = prompt("¿Quieres saber que planetas tienen satelites?");
 let tieneSats = SolarSystem.filter((nombre) => nombre.Sats > 0)
-if (preguntaSats == "si"){
+if (preguntaSats == "si") {
     console.log(tieneSats);
     let siTieneSats = tieneSats.map(sats => sats.nombre);
     console.log(siTieneSats);
     alert("Estos planetas tiene satelites" + siTieneSats)
-}else{
-        alert("OK")
-        console.log("OK");
-    }
+} else {
+    alert("OK")
+    console.log("OK");
+}
+
+
+//BOTONES
+
+let PlanetButton0 = document.getElementById("factorDrake1")
+PlanetButton0.onclick = () => {showDrake1()} 
+
+function showDrake1(){
+    console.log("Boton presionado");
+    li = PlanetButton0.innerHTML()
+    alert(li)
+    return
+}
