@@ -23,10 +23,13 @@ class Planets {
         console.log(this.vida)
     
         console.log("A que distancia esta del SOL?: ");
+    }
+    humanDistance(){
 
         console.log("Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas");
         // alert("A que distancia esta del SOL?: " + "Esta a " + (this.distance * 150) + " Millones de Kilometros del Sol " + "o " + (this.distance) + " Unidades Astronomicas")
-
+    }
+    humanVisit(){
         if ((this.distance * 150) > 200) {
 
             console.log("El planeta esta muy lejos para una visita humana");

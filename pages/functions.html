@@ -6,13 +6,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Welcome to planetary information - Functions</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='../js/index.js'></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+    <script src='../js/functions.js'></script>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body id="backgroundBLACK">
     <h1 id="headerAPP">Planetary Info</h1>
     <p id="headerAPP">This APP will let you understand a few things about our solar system</p>
@@ -33,16 +34,40 @@
             </div>
         </div>
     </nav>
-<div class="card" style="width:max-content">
-    <form class="text-center">
-        <h4>Datos personales</h4>
-        <br>
-        <button class="card" id="factorDrake1">Button TEST1</button>>
-        <br>
-        <button class="card" id="factorDrake2">Button TEST2</button>>
-        <br>
-        <button class="card" id="factorDrake3">Button TEST3</button>>
-        <br>
-    </form>
-</div>
+    <div class="card">
+        <form class="text-center" name="drakeForm" id="drakeForm">
+            <br>
+            <h4>Formula de Drake</h4>
+            <br>
+            <img src="../images/drakeEq.svg">
+            <br>
+            <hr>
+            <div id="resDrakeEq"></p>
+            <hr>
+            <br>
+            <input class="input_form" type="number" name="varDrake1" min="0" max="9" width="10"><p>Tasa formacion de estrellas</p>
+            <input class="input_form" type="number" name="varDrake2" min="0" max="7" width="10"><p>Estrellas con planetas</p>
+            <input class="input_form" type="number" name="varDrake3" min="0" max="7" width="10"><p>Planetas potenciales</p>
+            <input class="input_form" type="number" name="varDrake4" min="0" max="7" width="10"><p>Vida inminente</p>
+            <input class="input_form" type="number" name="varDrake5" min="0" max="7" width="10"><p>Vida inteligente</p>
+            <input class="input_form" type="number" name="varDrake6" min="0" max="7" width="10"><p>Señales fuera de su planeta</p>
+            <input class="input_form" type="number" name="varDrake7" min="0" max="7" width="10"><p>Periodo de tiempo</p>
+            <hr>
+            <button class="button" id="calcEqDrake" onclick="getDrakeVars()">Calcular</button>
+            <input type="submit" class="button" value="Almacenar" name="checkEqDrake" id="checkEqDrake" onclick="dataCheck()"></button>
+            <hr>
+            <br>
+            <h4>Referencia</h4>
+            <br>
+            <p class="card"> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual )               
+                R∗ = la tasa promedio de formación de estrellas en nuestra Galaxia
+                fp = la fracción de esas estrellas que tienen planetas
+                ne = el número promedio de planetas que potencialmente pueden albergar vida por cada estrella que tiene planetas
+                fl = la fracción de planetas que podrían albergar vida que realmente desarrollan vida en algún momento
+                fi = la fracción de planetas con vida que realmente desarrollan vida inteligente (civilizaciones)
+                fc = la fracción de civilizaciones que desarrollan una tecnología que libera signos detectables de su existencia en el espacio
+                L = el período de tiempo durante el cual dichas civilizaciones emiten señales detectables al espacio</p>
+            <br>
+        </form>
+    </div>
 </body>
