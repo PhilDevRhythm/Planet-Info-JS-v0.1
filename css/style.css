@@ -35,3 +35,21 @@ li {
     color: aliceblue;
 
 }
+#nav-link{
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+}
+.equationField{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+}
+#PlanetChooser{
+    flex-direction: column;
+}

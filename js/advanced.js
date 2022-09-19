@@ -49,11 +49,8 @@ class Planets {
 
 //USER PROMPT//
 
-function planetChooser (){
-    var userPlanetInput = "mercurio"
-    var planetInput = userPlanetInput.toLowerCase();
-
-}
+var userPlanetInput = prompt("Ingresa el planeta del cual quieres información");
+var planetInput = userPlanetInput.toLowerCase();
 
 //Constantes para funcion constructora
 
@@ -114,9 +111,9 @@ const SolarSystem = [
 
 //FILTER
 
-function FilterDistance(distance) {
+function FilterDistance(distance){
     let userDistance = distance / 150
-    userDistance.innerHTML = "<p> " + mapDistance + "</p>"
+    userDistance.innerHTML = "<p> " + mapDistance  + "</p>"
     const orderDistance = SolarSystem.filter(nombre => nombre.distance > userDistance);
     console.log(orderDistance);
     const mapDistance = orderDistance.map(distance => distance.nombre);
@@ -124,7 +121,7 @@ function FilterDistance(distance) {
     alert("Los siguientes planetas estan a una distancia mayor a la que ingresaste " + mapDistance)
 }
 
-function butFilter() {
+function butFilter(){
     varDistance = document.getElementsByName("inputDistance")
     FilterDistance(varDistance)
 }
@@ -134,16 +131,28 @@ botonFilter.on
 
 
 //BUSQUEDA
-function searchInfo() {
-    let preguntaSats = prompt("¿Quieres saber que planetas tienen satelites?");
-    let tieneSats = SolarSystem.filter((nombre) => nombre.Sats > 0)
-    if (preguntaSats == "si") {
-        console.log(tieneSats);
-        let siTieneSats = tieneSats.map(sats => sats.nombre);
-        console.log(siTieneSats);
-        alert("Estos planetas tiene satelites" + siTieneSats)
-    } else {
-        alert("OK")
-        console.log("OK");
-    }
+
+let preguntaSats = prompt("¿Quieres saber que planetas tienen satelites?");
+let tieneSats = SolarSystem.filter((nombre) => nombre.Sats > 0)
+if (preguntaSats == "si") {
+    console.log(tieneSats);
+    let siTieneSats = tieneSats.map(sats => sats.nombre);
+    console.log(siTieneSats);
+    alert("Estos planetas tiene satelites" + siTieneSats)
+} else {
+    alert("OK")
+    console.log("OK");
+}
+
+
+//BOTONES
+
+let PlanetButton0 = document.getElementById("factorDrake1")
+PlanetButton0.onclick = () => {showDrake1()} 
+
+function showDrake1(){
+    console.log("Boton presionado");
+    li = PlanetButton0.innerHTML()
+    alert(li)
+    return
 }
