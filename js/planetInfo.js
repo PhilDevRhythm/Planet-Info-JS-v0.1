@@ -9,14 +9,15 @@ function showPlanetInfo(planet) {
     let imageTemp = document.getElementById("showImage")
     imageTemp.innerHTML = '<img src=' + planetImage + '></img>'
     let textColTemp = document.getElementById("showData1")
-    textColTemp.innerHTML = '<p> El planeta ' + planetName  +  'tiene conocidos hasta el dia de hoy ' + planetSats + ' lunas o satelites naturales</p>' 
+    textColTemp.innerHTML = '<p> El planeta ' + planetName  +  ' tiene conocidos hasta el dia de hoy ' + planetSats + ' lunas o satelites naturales</p>' 
     let textColTemp2 = document.getElementById("showData2")
-    textColTemp2.innerHTML = planetName + '<p> esta a ' + planetDistance * 150 + 'millones de kilometros del planeta Tierra</p>'
+    textColTemp2.innerHTML = planetName + '<p> esta a ' + planetDistance * 150 + ' millones de kilometros del planeta Tierra</p>'
     if (planetLife == true){
-        textColTemp2.innerHTML = '<p> En el planeta' + planetName + 'hay seres vivos</p>'
+        textColTemp2.innerHTML = '<p> En el planeta ' + planetName + ' hay seres vivos</p>'
     }else{
-        textColTemp2.innerHTML = '<p> En el planeta' + planetName + 'no hay vida conocida</p>'
+        textColTemp2.innerHTML = '<p> En el planeta ' + planetName + ' no hay vida conocida</p>'
     }
+    console.log(planetSats);
     return
 }
  
@@ -64,3 +65,22 @@ function choosePlanet(planet) {
         default:
     }
 }
+// BUTTONS
+
+let butPl1 = document.getElementById("pl1")
+let butPl2 = document.getElementById("pl2")
+let butPl3 = document.getElementById("pl3")
+let butPl4 = document.getElementById("pl4")
+let butPl5 = document.getElementById("pl5")
+let butPl6 = document.getElementById("pl6")
+let butPl7 = document.getElementById("pl7")
+let butPl8 = document.getElementById("pl8")
+butPl1.onclick = () => {choosePlanet('mercurio'),event.preventDefault(),console.log("VISTO")}
+butPl2.onclick = () => {choosePlanet('venus'), event.preventDefault()} 
+butPl3.onclick = () => {choosePlanet('tierra'),event.preventDefault()}
+butPl4.onclick = () => {choosePlanet('marte'),event.preventDefault()}
+butPl5.onclick = () => {choosePlanet('jupiter'),event.preventDefault()}
+butPl6.onclick = () => {choosePlanet('saturno'),event.preventDefault()}
+butPl7.onclick = () => {choosePlanet('urano'),event.preventDefault()}
+butPl8.onclick = () => {choosePlanet('neptuno'),event.preventDefault()}
+
