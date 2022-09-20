@@ -6,14 +6,19 @@ function showPlanetInfo(planet) {
     let planetLife = tempInfo.vida
     let planetDistance = tempInfo.distance
     let planetImage = tempInfo.imageLink
-    console.log(tempInfo);
-    console.log(planetName);
-    console.log(planetSats);
-    console.log(planetDistance);
-    console.log(planetLife);
-    console.log(planetImage);
+    // console.log(tempInfo);
+    // console.log(planetName);
+    // console.log(planetSats);
+    // console.log(planetDistance);
+    // console.log(planetLife);
+    // console.log(planetImage);
     let imageTemp = document.getElementById("showImage")
     imageTemp.innerHTML = '<img src=' + planetImage + '></img>'
+    let textColTemp = document.getElementById("showData1")
+    textColTemp.innerHTML = '<p> El planeta ' + planetName  +  'tiene conocidos hasta el dia de hoy ' + planetSats + ' lunas o satelites naturales</p>' 
+    let textColTemp2 = document.getElementById("showData2")
+    textColTemp2.innerHTML = planetName + '<p> esta a ' + planetDistance * 150 + 'millones de kilometros del planeta Tierra</p>'
+    
     return
 }
  
@@ -28,7 +33,8 @@ const SolarSystem = [
     { id: "SS8", nombre: "Neptuno", Sats: 14, vida: "NO", distance: 30.1, imageLink: "../images/neptuno.jpg"}
 ]
 
-//funciones para eleccion
+//funciones para eleccion 
+//ELECCION DE PLANETA
 
 function choosePlanet(planet) {
     let planetInput = planet
@@ -60,6 +66,3 @@ function choosePlanet(planet) {
         default:
     }
 }
-
-//ELECCION DE PLANETA
-
