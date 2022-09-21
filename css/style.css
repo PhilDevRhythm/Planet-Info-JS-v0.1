@@ -28,6 +28,7 @@ li {
     --bs-nav-link-active:
         rgb(199, 84, 84);
     --bs-navbar-active-color: white;
+    justify-self: center;
 }
 
 .nav-item:hover {

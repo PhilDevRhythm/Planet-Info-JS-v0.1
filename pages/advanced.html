@@ -38,15 +38,19 @@
         </div>
     </nav>
 <div class="card">
-    <form id="filterForm">
-    <br>
-    <h4>Filtrado de distancia de planetas</h4>
-    <br>
-    <hr>
-    <br>
-    <p id="resFiltrado"></p>
-    <br>
-    <input class="input_form" type="number" name="inputDistance" min="0" max="5000" width="10"><p>Distancia a filtrar</p>
-    <button type="submit" name="inputDistance">Distancia a filtrar
-    </form>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col" id="PlanetChooser">
+                <br>
+                <form>
+                    <p class="textcenter">Ingresa Distancia</p>
+                    <input class="input_form" type="number" name="distance0" min="0">
+                    <br>
+                    <br>
+                    <button id="busqueda0">Busqueda</button>
+                    <button id="filtro0">Filtros</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>

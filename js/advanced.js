@@ -50,9 +50,50 @@ class Planets {
 //USER PROMPT//
 
 var userPlanetInput = prompt("Ingresa el planeta del cual quieres información");
+var userPlanetInput
 var planetInput = userPlanetInput.toLowerCase();
 
+
+let busqueda0 = document.getElementById("busqueda0")
+let distance0 = document.getElementById("distance0")
+let filtro0 = document.getElementById("filtro0")
+
+busqueda0.onclick = () => {openSearch(),event.preventDefault() }
+distance0.onclick = () => { choosePlanet('venus'), event.preventDefault() }
+filtro0.onclick = () => { choosePlanet('tierra'), event.preventDefault() }
+
+function opensearch(){
+    var busquedaBD = SolarSystem.filter([busqueda0])
+      
+    if (preguntaSats == "si") {
+        console.log(tieneSats);
+        let siTieneSats = tieneSats.map(sats => sats.nombre);
+        console.log(siTieneSats);
+        alert("Estos planetas tiene satelites" + siTieneSats)
+    } else {
+        alert("OK")
+        console.log("OK");
+    }
+
+//ARRAY
+
+const SolarSystem = [
+    { nombre: "Mercurio", Sats: 0, vida: "NO", distance: 0.39 },
+    { nombre: "Venus", Sats: 0, vida: "NO", distance: 0.72 },
+    { nombre: "Tierra", Sats: 1, vida: "SI", distance: 1 },
+    { nombre: "Marte", Sats: 2, vida: "NO", distance: 1.52 },
+    { nombre: "Jupiter", Sats: 79, vida: "NO", distance: 5.20 },
+    { nombre: "Saturno", Sats: 82, vida: "NO", distance: 9.58 },
+    { nombre: "Urano", Sats: 27, vida: "NO", distance: 19.23 },
+    { nombre: "Neptuno", Sats: 14, vida: "NO", distance: 30.1 }
+]
+
+
+
+
+
 //Constantes para funcion constructora
+
 
 const SolarSystem1 = new Planets("Mercurio", 0, "NO", 0.39);
 const SolarSystem2 = new Planets("Venus", 0, "NO", 0.72);
@@ -94,19 +135,6 @@ switch (planetInput) {
         alert("Planeta no existe, ingresalo en la seccion //USER PROMPT// entre las comillas");
 
 }
-
-//ARRAY
-
-const SolarSystem = [
-    { nombre: "Mercurio", Sats: 0, vida: "NO", distance: 0.39 },
-    { nombre: "Venus", Sats: 0, vida: "NO", distance: 0.72 },
-    { nombre: "Tierra", Sats: 1, vida: "SI", distance: 1 },
-    { nombre: "Marte", Sats: 2, vida: "NO", distance: 1.52 },
-    { nombre: "Jupiter", Sats: 79, vida: "NO", distance: 5.20 },
-    { nombre: "Saturno", Sats: 82, vida: "NO", distance: 9.58 },
-    { nombre: "Urano", Sats: 27, vida: "NO", distance: 19.23 },
-    { nombre: "Neptuno", Sats: 14, vida: "NO", distance: 30.1 }
-]
 
 
 //FILTER
@@ -155,4 +183,4 @@ function showDrake1(){
     li = PlanetButton0.innerHTML()
     alert(li)
     return
-}
+}}
