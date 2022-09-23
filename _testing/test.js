@@ -195,3 +195,7 @@ switch (planetInput) {
         alert("Elije planeta de nuevo");
 
 }
+
+
+const carrito1 =[]
+carrito1.push = localStorage.getItem()
