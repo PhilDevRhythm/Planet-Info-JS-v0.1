@@ -31,8 +31,25 @@ function dataCheck() {
     let checkResult = document.getElementById("resDrakeEq")
     checkResult.innerHTML = "<p> Informacion almacenada en Bitacora de Calculos </p> "
     let showOnWeb = document.getElementById("drakeCapture1")
+    let showonWeb2 = document.getElementById("compareDrake")
     let savedData = localStorage.getItem("savedDrakeVars")
-    showOnWeb.innerHTML = "<p>Datos guardados de<br>Equacion de Drake</p><br>" + savedData
+    console.log(savedData.length); 
+    console.log(savedData)
+
+    let tableData0 = document.getElementById("savedData0")
+    tableData0.innerHTML = savedData[0]
+    let tableData1 = document.getElementById("savedData2")
+    tableData1.innerHTML = savedData[2]
+    let tableData2 = document.getElementById("savedData4")
+    tableData2.innerHTML = savedData[4]
+    let tableData3 = document.getElementById("savedData6")
+    tableData3.innerHTML = savedData[6]
+    let tableData4 = document.getElementById("savedData8")
+    tableData4.innerHTML = savedData[8]
+    let tableData5 = document.getElementById("savedData10")
+    tableData5.innerHTML = savedData[10]
+    let tableData6 = document.getElementById("savedData12")
+    tableData6.innerHTML = savedData[12]
     return
 }
 
@@ -51,6 +68,20 @@ function captureDrakeData(a, b, c, d, e, f, g, resDrakeEq) {
 let drakeForm1 = document.getElementsByName("checkEqDrake");
 console.log(drakeForm1);
 drakeForm1.onclick = () => dataCheck();
+
+
+//EXPORT BUTTONS FUNCTIONS
+function exportXLSX(){
+    new TableExport(document.getElementsByTagName('tableDrakeData'))
+    return
+}
+
+let buttonExportXLSX = document.getElementById("butExpXSLX")
+buttonExportXLSX.onclick = () => {"click", exportXLSX() }
+
+// EXPORT CODE
+
+
 
 
 
