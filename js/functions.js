@@ -1,7 +1,7 @@
 function DrakeEq(a, b, c, d, e, f, g) {
     let resDrakeEq = a * b * c * d * e * f * g
     let showResult = document.getElementById("resDrakeEq")
-    showResult.innerHTML = "<p> Valor N= </p>" + resDrakeEq + "<p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual) </p>"
+    showResult.innerHTML = "<p> Valor N = </p> " + resDrakeEq + " <p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual) </p>"
     let resDrakeStore = JSON.stringify(resDrakeEq)
     localStorage.setItem("savedDrakeRes", resDrakeStore)
     return
@@ -70,16 +70,18 @@ console.log(drakeForm1);
 drakeForm1.onclick = () => dataCheck();
 
 
-//EXPORT BUTTONS FUNCTIONS
+//EXPORT FUNCTIONS
 function exportXLSX(){
     new TableExport(document.getElementsByTagName('tableDrakeData'))
     return
 }
 
+// EXPORT BUTTONS
 let buttonExportXLSX = document.getElementById("butExpXSLX")
-buttonExportXLSX.onclick = () => {"click", exportXLSX() }
+buttonExportXLSX.onclick = () => {exportXLSX()}
 
-// EXPORT CODE
+
+
 
 
 

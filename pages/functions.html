@@ -143,8 +143,10 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card container-xl">
+        <br>
         <p> Ultimos datos guardados de<br>Equacion de Drake</p><br>
+        <br>
         <!-- TABLA DE EXPORTACION -->
         <table tag='tableDrakeData' id='tableDrake'>
             <tr>
@@ -170,11 +172,27 @@
 
     <!-- BOTONES DE EXPORTACION  -->
 
-    <div class="card">
-        <div class="card" id="compareDrake"></div>
-        <button type="button" id="butExpXSLX">Exportar a .xlsx</button>
-        <button type="button" id="butExpCSV">Exportar a .csv</button>
-        <button type="button" id="butExpTXT">Exportar a .txt</button>
+    <div class="container text-center">
+        <div class="row" id="compareDrake">
+            <div class="col">
+                <div>
+                    <br>
+                    <button type="button" style="width:100px" id="butExpXSLX">Exportar a .xlsx</button>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <br>
+                    <button type="button" style="width:100px" id="butExpCSV">Exportar a .csv</button>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <br>
+                    <button type="button" style="width:100px" id="butExpTXT">Exportar a .txt</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     </div>
