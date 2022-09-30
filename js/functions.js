@@ -33,7 +33,7 @@ function dataCheck() {
     let showOnWeb = document.getElementById("drakeCapture1")
     let showonWeb2 = document.getElementById("compareDrake")
     let savedData = localStorage.getItem("savedDrakeVars")
-    console.log(savedData.length); 
+    console.log(savedData.length);
     console.log(savedData)
 
     let tableData0 = document.getElementById("savedData0")
@@ -71,15 +71,26 @@ drakeForm1.onclick = () => dataCheck();
 
 
 //EXPORT FUNCTIONS
-function exportXLSX(){
-    new TableExport(document.getElementsByTagName('tableDrakeData'))
-    return
+function exportXLSX() {
+    let tableExportVar = TableExport(document.getElementsByTagName('tableDrakeData'))
+    return tableExportVar
 }
 
 // EXPORT BUTTONS
-let buttonExportXLSX = document.getElementById("butExpXSLX")
-buttonExportXLSX.onclick = () => {exportXLSX()}
 
+let buttonExportXLSX = document.getElementById("butExpXSLX")
+buttonExportXLSX.onclick = () => {excel2()}
+
+function excel2(){
+    console.log("entre");
+    $("#tableDrake").table2excel({
+        exclude: ".noExl",
+        name: "Drake-Table-result",
+        filename: "Planetary-info-drakeTable",
+        fileext: ".xls"
+    });
+    console.log("sali");
+};
 
 
 
