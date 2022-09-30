@@ -10,18 +10,18 @@
 //         console.log("Planeta: ")
 //         console.log(this.nombre)
 //         // alert("Elegiste el planeta: " + this.nombre)
-        
+
 
 //         console.log("Cantidad de Satelites");
 //         // alert("Cantidad de Satelites: " + this.sats)
 
 //         console.log(this.sats)
-    
+
 //         console.log("Planeta tiene vida?: ");
 //         // alert("Planeta tiene vida?: " + this.vida)
 
 //         console.log(this.vida)
-    
+
 //         console.log("A que distancia esta del SOL?: ");
 //     }
 //     humanDistance(){
@@ -135,67 +135,84 @@
 
 
 
-function showPlanetInfo (planet){
-    let tempInfo = [] 
-    tempInfo = SolarSystem[planet]
-    let planetName = tempInfo.nombre
-    let planetSats = tempInfo.Sats 
-    let planetLife = tempInfo.vida
-    let planetDistance = tempInfo.distance
-    console.log(tempInfo);
-    console.log(planetName);
-    console.log(planetSats);
-    console.log(planetDistance);
-    console.log(planetLife);
-    return
-}
-const SolarSystem = [
-    { id: "SS1", nombre: "Mercurio", Sats: 0, vida: "NO", distance: 0.39 },
-    { id: "SS2", nombre: "Venus", Sats: 0, vida: "NO", distance: 0.72 },
-    { id: "SS3", nombre: "Tierra", Sats: 1, vida: "SI", distance: 1 },
-    { id: "SS4", nombre: "Marte", Sats: 2, vida: "NO", distance: 1.52 },
-    { id: "SS5", nombre: "Jupiter", Sats: 79, vida: "NO", distance: 5.20 },
-    { id: "SS6", nombre: "Saturno", Sats: 82, vida: "NO", distance: 9.58 },
-    { id: "SS7", nombre: "Urano", Sats: 27, vida: "NO", distance: 19.23 },
-    { id: "SS8", nombre: "Neptuno", Sats: 14, vida: "NO", distance: 30.1 }
-]
+// function showPlanetInfo (planet){
+//     let tempInfo = [] 
+//     tempInfo = SolarSystem[planet]
+//     let planetName = tempInfo.nombre
+//     let planetSats = tempInfo.Sats 
+//     let planetLife = tempInfo.vida
+//     let planetDistance = tempInfo.distance
+//     console.log(tempInfo);
+//     console.log(planetName);
+//     console.log(planetSats);
+//     console.log(planetDistance);
+//     console.log(planetLife);
+//     return
+// }
+// const SolarSystem = [
+//     { id: "SS1", nombre: "Mercurio", Sats: 0, vida: "NO", distance: 0.39 },
+//     { id: "SS2", nombre: "Venus", Sats: 0, vida: "NO", distance: 0.72 },
+//     { id: "SS3", nombre: "Tierra", Sats: 1, vida: "SI", distance: 1 },
+//     { id: "SS4", nombre: "Marte", Sats: 2, vida: "NO", distance: 1.52 },
+//     { id: "SS5", nombre: "Jupiter", Sats: 79, vida: "NO", distance: 5.20 },
+//     { id: "SS6", nombre: "Saturno", Sats: 82, vida: "NO", distance: 9.58 },
+//     { id: "SS7", nombre: "Urano", Sats: 27, vida: "NO", distance: 19.23 },
+//     { id: "SS8", nombre: "Neptuno", Sats: 14, vida: "NO", distance: 30.1 }
+// ]
 
 
 
-//ELECCION DE PLANETA
+// //ELECCION DE PLANETA
 
-let planetInput = "mercurio"
+// let planetInput = "mercurio"
 
-switch (planetInput) {
-    case "mercurio":
-        showPlanetInfo(0)
-        break;
-    case "venus":
-        showPlanetInfo(1)
-        break;
-    case "tierra":
-        showPlanetInfo(2)
-        break;
-    case "marte":
-        showPlanetInfo(3)
-        break;
-    case "jupiter":
-        showPlanetInfo(4)
-        break;
-    case "saturno":
-        showPlanetInfo(5)
-        break;
-    case "urano":
-        showPlanetInfo(6)
-        break;
-    case "neptuno":
-        showPlanetInfo(7)
-        break;
-    default:
-        alert("Elije planeta de nuevo");
+// switch (planetInput) {
+//     case "mercurio":
+//         showPlanetInfo(0)
+//         break;
+//     case "venus":
+//         showPlanetInfo(1)
+//         break;
+//     case "tierra":
+//         showPlanetInfo(2)
+//         break;
+//     case "marte":
+//         showPlanetInfo(3)
+//         break;
+//     case "jupiter":
+//         showPlanetInfo(4)
+//         break;
+//     case "saturno":
+//         showPlanetInfo(5)
+//         break;
+//     case "urano":
+//         showPlanetInfo(6)
+//         break;
+//     case "neptuno":
+//         showPlanetInfo(7)
+//         break;
+//     default:
+//         alert("Elije planeta de nuevo");
 
-}
+// }
 
 
-const carrito1 =[]
-carrito1.push = localStorage.getItem()
+// const carrito1 =[]
+// carrito1.push = localStorage.getItem()
+
+let lista1 = document.getElementById('lista')
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((data) => {
+
+        data.forEach((post) => {
+            let li = document.createElement("li")
+            li.innerHTML = `
+                <h1>Usuario : ${post.userId}<p>
+                <h2> ID :  ${post.id}
+                <h2> Title : ${post.title}   
+                <h2> Texto : ${post.body}
+                `
+        lista1.append(li)})
+    })
