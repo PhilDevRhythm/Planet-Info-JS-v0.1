@@ -54,3 +54,10 @@ li {
 #PlanetChooser{
     flex-direction: column;
 }
+#imgPlace{
+    text-align: center;
+}
+.imageOfTheDay{
+    width:100%;
+    max-width:600px;
+}

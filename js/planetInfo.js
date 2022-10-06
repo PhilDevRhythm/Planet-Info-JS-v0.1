@@ -9,7 +9,7 @@ function showPlanetInfo(planet) {
     let planetDistance = tempInfo.distance
     let planetImage = tempInfo.imageLink
     let imageTemp = document.getElementById("showImage")
-    imageTemp.innerHTML = '<img src=' + planetImage + ' style="width:370px;height:300px"></img>'
+    imageTemp.innerHTML = '<img src=' + planetImage + ' class="imageOfTheDay"></img>'
     let textColTemp = document.getElementById("showData1")
     textColTemp.innerHTML = '<p> El planeta ' + planetName + ' tiene conocidos hasta el dia de hoy ' + planetSats + ' lunas o satelites naturales</p>'
     let textColTemp2 = document.getElementById("showData2")

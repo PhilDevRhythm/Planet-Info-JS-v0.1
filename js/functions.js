@@ -1,7 +1,10 @@
 function DrakeEq(a, b, c, d, e, f, g) {
     let resDrakeEq = a * b * c * d * e * f * g
     let showResult = document.getElementById("resDrakeEq")
-    showResult.innerHTML = "<p> Valor N = </p> " + resDrakeEq + " <p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual) </p>"
+    showResult.innerHTML = `<p> Valor N = ${resDrakeEq}
+                            <br>
+                            <p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual)
+                            </p>`
     let resDrakeStore = JSON.stringify(resDrakeEq)
     localStorage.setItem("savedDrakeRes", resDrakeStore)
     return
@@ -29,7 +32,7 @@ function dataCheck() {
     arraydata = localStorage.getItem("savedDrakevars")
     captureDrakeData((localStorage.getItem("savedDrakeVars")[1]), (localStorage.getItem("savedDrakeVars")[3]), (localStorage.getItem("savedDrakeVars")[5]), (localStorage.getItem("savedDrakeVars")[7]), (localStorage.getItem("savedDrakeVars")[0]), (localStorage.getItem("savedDrakeVars")[2]), (localStorage.getItem("savedDrakeVars")[4]))
     let checkResult = document.getElementById("resDrakeEq")
-    checkResult.innerHTML = "<p> Informacion almacenada en Bitacora de Calculos </p> "
+    checkResult.innerHTML = "<p> Informacion almacenada en Bitacora de Calculos </p><br> "
     let showOnWeb = document.getElementById("drakeCapture1")
     let showonWeb2 = document.getElementById("compareDrake")
     let savedData = localStorage.getItem("savedDrakeVars")
@@ -79,9 +82,9 @@ function exportXLSX() {
 // EXPORT BUTTONS
 
 let buttonExportXLSX = document.getElementById("butExpXSLX")
-buttonExportXLSX.onclick = () => {excel2()}
+buttonExportXLSX.onclick = () => { excel2() }
 
-function excel2(){
+function excel2() {
     console.log("entre");
     $("#tableDrake").table2excel({
         exclude: ".noExl",
