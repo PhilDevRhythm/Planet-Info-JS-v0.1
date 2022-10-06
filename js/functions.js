@@ -1,7 +1,10 @@
 function DrakeEq(a, b, c, d, e, f, g) {
     let resDrakeEq = a * b * c * d * e * f * g
     let showResult = document.getElementById("resDrakeEq")
-    showResult.innerHTML = "<p> Valor N= </p>" + resDrakeEq + "<p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual) </p>"
+    showResult.innerHTML = `<p> Valor N = ${resDrakeEq}
+                            <br>
+                            <p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual)
+                            </p>`
     let resDrakeStore = JSON.stringify(resDrakeEq)
     localStorage.setItem("savedDrakeRes", resDrakeStore)
     return
@@ -29,10 +32,27 @@ function dataCheck() {
     arraydata = localStorage.getItem("savedDrakevars")
     captureDrakeData((localStorage.getItem("savedDrakeVars")[1]), (localStorage.getItem("savedDrakeVars")[3]), (localStorage.getItem("savedDrakeVars")[5]), (localStorage.getItem("savedDrakeVars")[7]), (localStorage.getItem("savedDrakeVars")[0]), (localStorage.getItem("savedDrakeVars")[2]), (localStorage.getItem("savedDrakeVars")[4]))
     let checkResult = document.getElementById("resDrakeEq")
-    checkResult.innerHTML = "<p> Informacion almacenada en Bitacora de Calculos </p> "
+    checkResult.innerHTML = "<p> Informacion almacenada en Bitacora de Calculos </p><br> "
     let showOnWeb = document.getElementById("drakeCapture1")
+    let showonWeb2 = document.getElementById("compareDrake")
     let savedData = localStorage.getItem("savedDrakeVars")
-    showOnWeb.innerHTML = "<p>Datos guardados de<br>Equacion de Drake</p><br>" + savedData
+    console.log(savedData.length);
+    console.log(savedData)
+
+    let tableData0 = document.getElementById("savedData0")
+    tableData0.innerHTML = savedData[0]
+    let tableData1 = document.getElementById("savedData2")
+    tableData1.innerHTML = savedData[2]
+    let tableData2 = document.getElementById("savedData4")
+    tableData2.innerHTML = savedData[4]
+    let tableData3 = document.getElementById("savedData6")
+    tableData3.innerHTML = savedData[6]
+    let tableData4 = document.getElementById("savedData8")
+    tableData4.innerHTML = savedData[8]
+    let tableData5 = document.getElementById("savedData10")
+    tableData5.innerHTML = savedData[10]
+    let tableData6 = document.getElementById("savedData12")
+    tableData6.innerHTML = savedData[12]
     return
 }
 
@@ -51,6 +71,33 @@ function captureDrakeData(a, b, c, d, e, f, g, resDrakeEq) {
 let drakeForm1 = document.getElementsByName("checkEqDrake");
 console.log(drakeForm1);
 drakeForm1.onclick = () => dataCheck();
+
+
+//EXPORT FUNCTIONS
+function exportXLSX() {
+    let tableExportVar = TableExport(document.getElementsByTagName('tableDrakeData'))
+    return tableExportVar
+}
+
+// EXPORT BUTTONS
+
+let buttonExportXLSX = document.getElementById("butExpXSLX")
+buttonExportXLSX.onclick = () => { excel2() }
+
+function excel2() {
+    console.log("entre");
+    $("#tableDrake").table2excel({
+        exclude: ".noExl",
+        name: "Drake-Table-result",
+        filename: "Planetary-info-drakeTable",
+        fileext: ".xls"
+    });
+    console.log("sali");
+};
+
+
+
+
 
 
 
