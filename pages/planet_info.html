@@ -15,9 +15,9 @@
 
 <body id="backgroundBLACK">
     <h1 id="headerAPP">Planetary Info</h1>
-    <p id="headerAPP">This APP will let you understand a few things about our solar system</p>
-    <nav class="navbar navbar-expand-lg" id="">
-        <div class="container-fluid" id="nav_container">
+    <p id="headerAPP">This APP will let you understand a few things about our Universe</p>
+    <nav class="navbar navbar-expand-lg text-center">
+        <div class="container-fluid text-center" id="nav_container">
             <div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-fill" id="nav_bar">
                     <li class="nav-item">
@@ -44,14 +44,14 @@
             <div class="col" id="PlanetChooser">
                 <br>
                 <form>
-                    <button value="mercurio" name="pl1" id="pl1">Mercurio</button>
-                    <button value="venus" name="pl2" id="pl2">Venus</button>
-                    <button value="tierra" name="pl3" id="pl3">Tierra</button>
-                    <button value="marte" name="pl4" id="pl4">Marte</button>
-                    <button value="jupiter" name="pl5" id="pl5">Jupiter</button>
-                    <button value="saturno" name="pl6" id="pl6">Saturno</button>
-                    <button value="urano" name="pl7" id="pl7">Urano</button>
-                    <button value="neptuno" name="pl8" id="pl8">Neptuno</button>
+                    <button class="btn btn-dark" value="mercury" name="pl1" id="pl1">Mercury</button>
+                    <button class="btn btn-dark" value="venus" name="pl2" id="pl2">Venus</button>
+                    <button class="btn btn-dark" value="earth" name="pl3" id="pl3">Earth</button>
+                    <button class="btn btn-dark" value="mars" name="pl4" id="pl4">Mars</button>
+                    <button class="btn btn-dark" value="jupiter" name="pl5" id="pl5">Jupiter</button>
+                    <button class="btn btn-dark" value="saturn" name="pl6" id="pl6">Saturn</button>
+                    <button class="btn btn-dark" value="uranus" name="pl7" id="pl7">Uranus</button>
+                    <button class="btn btn-dark" value="neptune" name="pl8" id="pl8">Neptune</button>
                 </form>
             </div>
         </div>
@@ -59,14 +59,41 @@
     <br>
     <hr>
     <br>
-    <div class="container text-center" id="showPlanets">
-        <div class="row">
-            <div class="col">
-                <div class="img-fluid" id="showImage"></div>
+    <!-- <div class="card container text-center text-bg-dark" id="showPlanets">
+        <div class="row text-bg-dark">
+            <div class="card col text-bg-dark">
+                <br>
+                <div class="img-fluid text-bg-dark card-img-top" id="showImage"></div>
+                <br>
+                <div class="col card-body">
+                    <div class="col">
+                        <div class="text-bg-dark card-text" id="showData2"></div>
+                        <div class="text-bg-dark card-body" id="showData1"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col"><div class="text-bg-dark" id="showData1"></div></div>
-            <div class="col"><div class="text-bg-dark" id="showData2"></div></div>
+        </div>
+    </div> -->
+    <div class="mb-3 text-center" style="display: flex;justify-content: center; max-width:80%;align-items: center">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div class="img-fluid rounded-start" alt="..." id="showImage"></div>
+            </div>
+            <div class="col-md-5">
+                <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                    <div class="card-text" id="showData1"></div>
+                    <br>
+                    <div class="card-text" id="showData2"></div>
+                    <br>
+                    <div class="card-text" id="showData3"></div>
+                    <div class="card-text" id="showData4"></div>
+                    <!-- <small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+            </div>
         </div>
     </div>
+    <div class="container text-center" id="showExtraData"><p class="planet-text">More data...</p></div>
     <script src='../js/planetInfo.js'></script>
 </body>

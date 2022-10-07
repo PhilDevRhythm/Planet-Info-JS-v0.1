@@ -59,5 +59,23 @@ li {
 }
 .imageOfTheDay{
     width:100%;
+    
     max-width:600px;
+}
+.planet-text{
+    color: white;
+}
+#extraPics{
+    align-items: center;
+    max-width: 20%;
+}
+#showExtraData{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#extraPics{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

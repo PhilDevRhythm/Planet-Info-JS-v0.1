@@ -43,4 +43,3 @@ fetch(fullDateURL)
         })
     })
 
-    
