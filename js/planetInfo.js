@@ -42,7 +42,7 @@ function showPlanetInfo(planet) {
     const fixedNumber2 = randomNumber2
     const fixedNumber3 = randomNumber3
 
-    
+
     // console.log(randomNumber);
     console.log(apiNasaURL);
 
@@ -102,7 +102,7 @@ const SolarSystem = [
     { id: "SS3", nombre: "Earth", Sats: 1, vida: true, distance: 1, imageLink: "../images/tierra.jpg" },
     { id: "SS4", nombre: "Mars", Sats: 2, vida: false, distance: 1.52, imageLink: "../images/mars.png" },
     { id: "SS5", nombre: "Jupiter", Sats: 79, vida: false, distance: 5.20, imageLink: "../images/jupiter.jpg" },
-    { id: "SS6", nombre: "Saturn", Sats: 82, vida: false, distance: 9.58, imageLink: "../images/saturn.jpg" },
+    { id: "SS6", nombre: "Saturn", Sats: 82, vida: false, distance: 9.58, imageLink: "../images/Saturn.jpg" },
     { id: "SS7", nombre: "Uranus", Sats: 27, vida: false, distance: 19.23, imageLink: "../images/urano.jpg" },
     { id: "SS8", nombre: "Neptune", Sats: 14, vida: false, distance: 30.1, imageLink: "../images/neptuno.jpg" }
 ]
