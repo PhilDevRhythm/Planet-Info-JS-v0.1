@@ -32,8 +32,15 @@ function showPlanetInfo(planet) {
     } else {
         textColTemp3.innerHTML = '<h2 class="planet-text"> On planet ' + planetName + ' there are no life forms found yet</h2>'
     }
-   
+
     let apiNasaURL = 'https://images-api.nasa.gov/search?q=' + planetName
+
+    if (planetName == "Mars") {
+        apiNasaURL = 'https://images-api.nasa.gov/search?q=planet+' + planetName
+    } else {
+
+    }
+
     const extraDataPlace = document.getElementById("showExtraData")
     var randomNumber1 = Math.floor(Math.random() * 40)
     var randomNumber2 = Math.floor(Math.random() * 40)
@@ -56,6 +63,25 @@ function showPlanetInfo(planet) {
             let resText2 = result.collection.items[fixedNumber1].data[0].description_508
             let resText3 = result.collection.items[fixedNumber2].data[0].description_508
             let resText4 = result.collection.items[fixedNumber3].data[0].description_508
+            if (resText2 === undefined) {
+                resText2 = result.collection.items[fixedNumber1].data[0].description
+            } else if (resText3 === undefined) {
+                resText3 = result.collection.items[fixedNumber2].data[0].description
+            } else if (resText4 === undefined) {
+                resText4 = result.collection.items[fixedNumber3].data[0].description
+            } else { }
+
+            console.log("check");
+            console.log(resText2);
+            console.log(resText3);
+            console.log(resText4);
+            console.log("check");
+
+
+
+
+
+            console.log(fixedNumber1);
 
             console.log(res1);
             console.log(res2);
