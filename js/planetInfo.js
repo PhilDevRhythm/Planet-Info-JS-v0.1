@@ -49,10 +49,6 @@ function showPlanetInfo(planet) {
     const fixedNumber2 = randomNumber2
     const fixedNumber3 = randomNumber3
 
-
-    // console.log(randomNumber);
-    console.log(apiNasaURL);
-
     fetch(apiNasaURL)
         .then((response) => response.json(), console.log("response ok"))
         .then((result) => {
@@ -70,25 +66,6 @@ function showPlanetInfo(planet) {
             } else if (resText4 === undefined) {
                 resText4 = result.collection.items[fixedNumber3].data[0].description
             } else { }
-
-            console.log("check");
-            console.log(resText2);
-            console.log(resText3);
-            console.log(resText4);
-            console.log("check");
-
-
-
-
-
-            console.log(fixedNumber1);
-
-            console.log(res1);
-            console.log(res2);
-            console.log(res3);
-            console.log(res4);
-            console.log(resText2);
-
 
             let col1 = document.getElementById("showExtraData")
             col1.innerHTML = `
@@ -117,7 +94,6 @@ function showPlanetInfo(planet) {
                                 <a href="#" id="botonMasInfo3" class="btn btn-info">View</a>
             `
         })
-    console.log("final forEach");
 }
 //BD
 

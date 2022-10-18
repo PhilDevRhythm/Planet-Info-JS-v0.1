@@ -16,25 +16,17 @@
 <body id="backgroundBLACK">
     <h1 id="headerAPP">Planetary Info</h1>
     <p id="headerAPP">This APP will let you understand a few things about our Universe</p>
-    <nav class="navbar navbar-expand-lg text-center">
+    <div class="text-center">
         <div class="container-fluid text-center" id="nav_container">
+            <button class="btn btn-dark" onclick="window.location.href='../index.html'" name="index" id="btn_home">Home</button>
+            <button class="btn btn-dark active" onclick="window.location.href='planet_info.html'" name="planet_info" id="btn_planet">Local Solar System info</button>
+            <button class="btn btn-dark" onclick="window.location.href='stellar_info.html'" name="stellar_info" id="btn_stellar">Local Stellar Information</button>
+            <button class="btn btn-dark" onclick="window.location.href='functions.html'" name="functions" id="btn_func">Functions</button>
+            <button class="btn btn-dark" onclick="window.location.href='advanced.html'" name="advanced" id="btn_advanced">Advanced</button>
+            <button class="btn btn-dark" onclick="window.location.href='savedata.html'" name="savedata" id="btn_savedata">Savedata</button>
+        </div>
             <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-fill" id="nav_bar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="planet_info.html">Planets Information</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="functions.html">Functions</a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="advanced.html">Advanced</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="savedata.html">Saved Data</a>
-                    </li>
-                </ul>
+                
             </div>
         </div>
     </nav>
