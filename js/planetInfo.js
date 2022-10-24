@@ -90,7 +90,10 @@ function showPlanetInfo(planet) {
                 resText4 = result.collection.items[fixedNumber3].data[0].description
             } else { }
 
-            
+            let linkURL2 = "https://photojournal.jpl.nasa.gov/catalog/?IDNumber=" + resNasaID2
+            let linkURL3 = "https://photojournal.jpl.nasa.gov/catalog/?IDNumber=" + resNasaID3
+            let linkURL4 = "https://photojournal.jpl.nasa.gov/catalog/?IDNumber=" + resNasaID4
+
 
             let col1 = document.getElementById("showExtraData")
             col1.innerHTML = `
@@ -99,7 +102,7 @@ function showPlanetInfo(planet) {
                               <img src="${res2}" style="width:100%;max-width:300px" class="p-3 imageOfTheDay card-img-top img-fluid rounded-start text-bg-dark"></img>
                               <div class="card-body">
                                 <h5 class="card-title">${resTitle2}</h5>
-                                <p class="card-text"><br>NASA ID: ${resNasaID2}<br>Date created: ${resDateCreated2}<br>Keywords: ${resKeywords2}</p>
+                                <p class="card-text"><br>NASA ID: <a target="_blank" href="${linkURL2}">${resNasaID2}<br></a>Date created: ${resDateCreated2}<br>Keywords: ${resKeywords2}</p>
                                 <p> Credits to: ${resSecCreator2}</p>
                                </div>
                             </div>
@@ -107,7 +110,7 @@ function showPlanetInfo(planet) {
                             <img src="${res3}" id="extraPics" style="width:100%;max-width:300px" class="p-3 card-img-top imageOfTheDay img-fluid rounded-start text-bg-dark"></img>
                               <div class="card-body">
                                 <h5 class="card-title">${resTitle3}</h5>
-                                <p class="card-text"><br>NASA ID: ${resNasaID3}<br>Date created: ${resDateCreated3}<br>Keywords: ${resKeywords3}</p>
+                                <p class="card-text"><br>NASA ID: <a target="_blank" href="${linkURL3}">${resNasaID3}<br></a>Date created: ${resDateCreated3}<br>Keywords: ${resKeywords3}</p>
                                 <p> Credits to: ${resSecCreator3}</p>
                                 
                                 </div>    
@@ -116,7 +119,7 @@ function showPlanetInfo(planet) {
                             <img src="${res4}" id="extraPics" style="width:100%;max-width:300px" class="p-3 card-img-top imageOfTheDay img-fluid rounded-start"></img>
                               <div class="card-body">
                                 <h5 class="card-title">${resTitle4}</h5>
-                                <p class="card-text"><br>NASA ID: ${resNasaID4}<br>Date created: ${resDateCreated4}<br>Keywords: ${resKeywords4}</p>
+                                <p class="card-text"><br>NASA ID: <a target="_blank" href="${linkURL4}">${resNasaID4}<br></a>Date created: ${resDateCreated4}<br>Keywords: ${resKeywords4}</p>
                                 <p> Credits to: ${resSecCreator4}</p>
                                 
             `
