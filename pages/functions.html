@@ -12,22 +12,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body id="backgroundBLACK">
     <h1 id="headerAPP" class="display-1">Planetary Info</h1>
     <p class="lead" id="headerAPP">This APP will let you understand a few things about our Solar System</p>
     <div class="text-center">
         <div class="container-fluid text-center" id="nav_container">
-            <button class="btn btn-dark" onclick="window.location.href='../index.html'" name="index" id="btn_home">Home</button>
-            <button class="btn btn-dark" onclick="window.location.href='planet_info.html'" name="planet_info" id="btn_planet">Local Solar System info</button>
-            <!-- <button class="btn btn-dark" onclick="window.location.href='stellar_info.html'" name="stellar_info" id="btn_stellar">Local Stellar Information</button> -->
-            <button class="btn btn-dark active" onclick="window.location.href='functions.html'" name="functions" id="btn_func">Functions</button>
-            <!-- <button class="btn btn-dark" onclick="window.location.href='advanced.html'" name="advanced" id="btn_advanced">Advanced</button>
-            <button class="btn btn-dark" onclick="window.location.href='savedata.html'" name="savedata" id="btn_savedata">Savedata</button> -->
+            <button class="btn btn-dark" onclick="window.location.href='/JS_CoderHouse/index.html'" name="index"
+                id="btn_home">Home</button>
+            <button class="btn btn-dark" onclick="window.location.href='/JS_CoderHouse/pages/planet_info.html'"
+                name="planet_info" id="btn_planet">Local Solar System info</button>
+            <button class="btn btn-dark active" onclick="window.location.href='/JS_CoderHouse/pages/functions.html'"
+                name="functions" id="btn_func">Functions</button>
+
         </div>
-            <div>
-                
-            </div>
+        <div>
+
         </div>
+    </div>
     </nav>
     <br>
     <div class="card text-bg-dark mb-3">
@@ -75,47 +77,53 @@
                                 <input class="input_form" type="number" name="varDrake7" min="0" max="7" width="10">
                                 <p>Periodo de tiempo</p>
                                 <hr>
-                                <button class="button btn btn-info" id="calcEqDrake" onclick="getDrakeVars()">Calcular</button>
-                                <input type="submit" class="button btn btn-info" name="checkEqDrake" id="checkEqDrake"></button>
+                                <button class="button btn btn-info" id="calcEqDrake"
+                                    onclick="getDrakeVars()">Calcular</button>
+                                <input type="submit" class="button btn btn-info" name="checkEqDrake"
+                                    id="checkEqDrake"></button>
                                 <p> Calcular luego Almacenar</p>
                             </div>
                             <hr>
-                            <br>
-                        </div></div></div></div></form>
-                        <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqFinal"></div>
-                        <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqAlmacenar"></div>
-                            <div class="text-center">
-                                <h4>Referencia</h4>
-                            </div>
-                            <br>
-                            <p class="card text-bg-dark mb-3"> N = el número de civilizaciones de nuestra galaxia
-                                con
-                                las que
-                                podría ser posible
-                                la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual )
-                                R∗ = la tasa promedio de formación de estrellas en nuestra Galaxia
-                                fp = la fracción de esas estrellas que tienen planetas
-                                ne = el número promedio de planetas que potencialmente pueden albergar vida por cada
-                                estrella
-                                que tiene planetas
-                                fl = la fracción de planetas que podrían albergar vida que realmente desarrollan
-                                vida en
-                                algún
-                                momento
-                                fi = la fracción de planetas con vida que realmente desarrollan vida inteligente
-                                (civilizaciones)
-                                fc = la fracción de civilizaciones que desarrollan una tecnología que libera signos
-                                detectables
-                                de su existencia en el espacio
-                                L = el período de tiempo durante el cual dichas civilizaciones emiten señales
-                                detectables al
-                                espacio</p>
                             <br>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
+        <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqFinal"></div>
+        <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqAlmacenar"></div>
+        <div class="text-center">
+            <h4>Referencia</h4>
+        </div>
+        <br>
+        <p class="card text-bg-dark mb-3"> N = el número de civilizaciones de nuestra galaxia
+            con
+            las que
+            podría ser posible
+            la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual )
+            R∗ = la tasa promedio de formación de estrellas en nuestra Galaxia
+            fp = la fracción de esas estrellas que tienen planetas
+            ne = el número promedio de planetas que potencialmente pueden albergar vida por cada
+            estrella
+            que tiene planetas
+            fl = la fracción de planetas que podrían albergar vida que realmente desarrollan
+            vida en
+            algún
+            momento
+            fi = la fracción de planetas con vida que realmente desarrollan vida inteligente
+            (civilizaciones)
+            fc = la fracción de civilizaciones que desarrollan una tecnología que libera signos
+            detectables
+            de su existencia en el espacio
+            L = el período de tiempo durante el cual dichas civilizaciones emiten señales
+            detectables al
+            espacio</p>
+        <br>
+    </div>
+    </div>
+    </div>
+    </div>
+    </form>
     </div>
     <div>
         <div class="row">
@@ -136,7 +144,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- BOTONES DE EXPORTACION  -->
     <hr>
@@ -150,7 +158,7 @@
             <div class="col">
                 <div>
                     <br>
-                    
+
                 </div>
             </div>
             <div class="col">
