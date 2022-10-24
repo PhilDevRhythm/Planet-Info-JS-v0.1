@@ -42,9 +42,9 @@
 
                     </div>
                     <div class="col" style="align-content:center">
-                        <img src="../images/drakeEq.svg" style="align-self: center"
-                            class="card text-center text-bg-light">
-                        <div class="card-header text-center">Formula de Drake</div>
+                        <img src="../images/drakeEq.svg" id="nav-link" style="align-self: center"
+                            class="card text-center text-bg-light"></img>
+                        <div class="card-header text-center lead">Drake's Formula</div>
                     </div>
                     <div class="col">
 
@@ -58,30 +58,37 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="col">
-                                <input class="input_form" type="number" name="varDrake1" min="1" max="100" placeholder="50" width="10">
-                                <p>Star formation rate - Tasa formacion de estrellas</p>
-                                <input class="input_form" type="number" name="varDrake2" min="0" max="7" width="10" placeholder="4">
-                                <p>% of Star with planets - Estrellas con planetas</p>
-                                <input class="input_form" type="number" name="varDrake3" min="0" max="7" width="10" placeholder="4">
-                                <p>% of fully formed planets - Planetas potenciales</p>
+                                <input class="input_form" type="number" name="varDrake1" min="1" max="100"
+                                    placeholder="1 - 100" width="10">
+                                <p class="lead">Star formation rate</p>
+                                <input class="input_form" type="number" name="varDrake2" min="0" max="7" width="10"
+                                    placeholder="1 - 7">
+                                <p class="lead">% of Star with planets</p>
+                                <input class="input_form" type="number" name="varDrake3" min="0" max="7" width="10"
+                                    placeholder="1 - 7">
+                                <p class="lead">% of fully formed planets</p>
                             </div>
                             <div class="col">
-                                <input class="input_form" type="number" name="varDrake4" min="1" max="10" width="10" placeholder="4">
-                                <p>Chance to have life - Vida inminente</p>
-                                <input class="input_form" type="number" name="varDrake5" min="1" max="10" width="10" placeholder="4">
-                                <p>Chance to have intelligent life - Vida inteligente</p>
-                                <input class="input_form" type="number" name="varDrake6" min="1" max="10" width="10" placeholder="4">
-                                <p>Chance to have comunications to space - Señales fuera de su planeta</p>
+                                <input class="input_form" type="number" name="varDrake4" min="1" max="10" width="10"
+                                    placeholder="1 - 10">
+                                <p class="lead">Chance to have life</p>
+                                <input class="input_form" type="number" name="varDrake5" min="1" max="10" width="10"
+                                    placeholder="1 - 10">
+                                <p class="lead">Chance to have intelligent life</p>
+                                <input class="input_form" type="number" name="varDrake6" min="1" max="10" width="10"
+                                    placeholder="1 - 10">
+                                <p class="lead">Chance to have comunications to space</p>
                             </div>
                             <div class="col">
-                                <input class="input_form" type="number" name="varDrake7" min="0" max="7" width="10" placeholder="4">
-                                <p>Periodo de tiempo</p>
+                                <input class="input_form" type="number" name="varDrake7" min="0" max="7" width="10"
+                                    placeholder="4">
+                                <p class="lead">Time interval number</p>
                                 <hr>
                                 <button class="button btn btn-info" id="calcEqDrake"
                                     onclick="getDrakeVars()">Calcular</button>
                                 <input type="submit" class="button btn btn-info" name="checkEqDrake"
                                     id="checkEqDrake"></button>
-                                <p> Calcular luego Almacenar</p>
+                                <p class="lead"> *Calcular luego almacenar</p>
                             </div>
                             <hr>
                             <br>
@@ -96,7 +103,7 @@
             <h4>Referencia</h4>
         </div>
         <br>
-        <p class="card text-bg-dark mb-3"> N = el número de civilizaciones de nuestra galaxia
+        <p class="card text-bg-dark mb-3 lead"> N = el número de civilizaciones de nuestra galaxia
             con
             las que
             podría ser posible
