@@ -15,22 +15,22 @@ function showPlanetInfo(planet) {
 
     let textColTemp = document.getElementById("showData1")
 
-    textColTemp.innerHTML = '<h2 class="planet-text"> Planet ' + planetName + ' has ' + planetSats + ' known moons</h2>'
+    textColTemp.innerHTML = '<h2 class="planet-text lead"> Planet ' + planetName + ' has ' + planetSats + ' known moons</h2>'
 
     let textColTemp2 = document.getElementById("showData2")
 
-    textColTemp2.innerHTML = '<h2 class="planet-text">' + planetName + ' is  ' + planetDistance * 150 + ' million kilometers from planet Earth</h2>'
+    textColTemp2.innerHTML = '<h2 class="planet-text lead">' + planetName + ' is  ' + planetDistance * 150 + ' million kilometers from planet Earth</h2>'
 
     let textColTemp4 = document.getElementById("showData4")
 
-    textColTemp4.innerHTML = '<h2 class="planet-text">'
+    textColTemp4.innerHTML = '<h2 class="planet-text lead">'
 
     let textColTemp3 = document.getElementById("showData3")
 
     if (planetLife == true) {
-        textColTemp3.innerHTML = '<h2 class="planet-text"> On planet ' + planetName + ' life exists</h2>'
+        textColTemp3.innerHTML = '<h2 class="planet-text lead"> On planet ' + planetName + ' life exists</h2>'
     } else {
-        textColTemp3.innerHTML = '<h2 class="planet-text"> On planet ' + planetName + ' there are no life forms found yet</h2>'
+        textColTemp3.innerHTML = '<h2 class="planet-text lead"> On planet ' + planetName + ' there are no life forms found yet</h2>'
     }
 
     let apiNasaURL = 'https://images-api.nasa.gov/search?q=' + planetName
@@ -48,17 +48,40 @@ function showPlanetInfo(planet) {
     const fixedNumber1 = randomNumber1
     const fixedNumber2 = randomNumber2
     const fixedNumber3 = randomNumber3
+    
 
     fetch(apiNasaURL)
         .then((response) => response.json(), console.log("response ok"))
         .then((result) => {
-            let res1 = result.collection.items[0].data[0].title
+            let resTitle2 = result.collection.items[fixedNumber1].data[0].title
+            let resTitle3 = result.collection.items[fixedNumber2].data[0].title
+            let resTitle4 = result.collection.items[fixedNumber3].data[0].title
             let res2 = result.collection.items[fixedNumber1].links[0].href
             let res3 = result.collection.items[fixedNumber2].links[0].href
             let res4 = result.collection.items[fixedNumber3].links[0].href
             let resText2 = result.collection.items[fixedNumber1].data[0].description_508
             let resText3 = result.collection.items[fixedNumber2].data[0].description_508
             let resText4 = result.collection.items[fixedNumber3].data[0].description_508
+            let resNasaID2 = result.collection.items[fixedNumber1].data[0].nasa_id
+            let resNasaID3 = result.collection.items[fixedNumber2].data[0].nasa_id
+            let resNasaID4 = result.collection.items[fixedNumber3].data[0].nasa_id
+            let resDesc2 = result.collection.items[fixedNumber1].data[0].description
+            let resDesc3 = result.collection.items[fixedNumber2].data[0].description
+            let resDesc4 = result.collection.items[fixedNumber3].data[0].description
+            let resDateCreated2 = result.collection.items[fixedNumber1].data[0].date_created
+            let resDateCreated3 = result.collection.items[fixedNumber2].data[0].date_created
+            let resDateCreated4 = result.collection.items[fixedNumber3].data[0].date_created
+            let resKeywords2 = result.collection.items[fixedNumber1].data[0].keywords
+            let resKeywords3 = result.collection.items[fixedNumber2].data[0].keywords
+            let resKeywords4 = result.collection.items[fixedNumber3].data[0].keywords
+
+            let resSecCreator2 = result.collection.items[fixedNumber1].data[0].secondary_creator
+            let resSecCreator3 = result.collection.items[fixedNumber2].data[0].secondary_creator
+            let resSecCreator4 = result.collection.items[fixedNumber3].data[0].secondary_creator
+
+            
+
+
             if (resText2 === undefined) {
                 resText2 = result.collection.items[fixedNumber1].data[0].description
             } else if (resText3 === undefined) {
@@ -67,36 +90,41 @@ function showPlanetInfo(planet) {
                 resText4 = result.collection.items[fixedNumber3].data[0].description
             } else { }
 
+            
+
             let col1 = document.getElementById("showExtraData")
             col1.innerHTML = `
                         <div class="row"><br><br>          
                             <div class="col mb-4 text-bg-dark extra-pics">
                               <img src="${res2}" style="width:100%;max-width:300px" class="p-3 imageOfTheDay card-img-top img-fluid rounded-start text-bg-dark"></img>
                               <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text">${resText2}</p>
-                                <a href="#" id="botonMasInfo1" class="btn btn-info">View</a>
+                                <h5 class="card-title">${resTitle2}</h5>
+                                <p class="card-text"><br>NASA ID: ${resNasaID2}<br>Date created: ${resDateCreated2}<br>Keywords: ${resKeywords2}</p>
+                                <p> Credits to: ${resSecCreator2}</p>
                                </div>
                             </div>
                             <div class="col mb-4 text-bg-dark extra-pics">
                             <img src="${res3}" id="extraPics" style="width:100%;max-width:300px" class="p-3 card-img-top imageOfTheDay img-fluid rounded-start text-bg-dark"></img>
                               <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text">${resText3}</p>
-                                <a href="#" id="botonMasInfo2" class="btn btn-info">View</a>
+                                <h5 class="card-title">${resTitle3}</h5>
+                                <p class="card-text"><br>NASA ID: ${resNasaID3}<br>Date created: ${resDateCreated3}<br>Keywords: ${resKeywords3}</p>
+                                <p> Credits to: ${resSecCreator3}</p>
+                                
                                 </div>    
                             </div>
                             <div class="col mb-4 text-bg-dark extra-pics">
                             <img src="${res4}" id="extraPics" style="width:100%;max-width:300px" class="p-3 card-img-top imageOfTheDay img-fluid rounded-start"></img>
                               <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text">${resText4}</p>
-                                <a href="#" id="botonMasInfo3" class="btn btn-info">View</a>
+                                <h5 class="card-title">${resTitle4}</h5>
+                                <p class="card-text"><br>NASA ID: ${resNasaID4}<br>Date created: ${resDateCreated4}<br>Keywords: ${resKeywords4}</p>
+                                <p> Credits to: ${resSecCreator4}</p>
+                                
             `
+            
         })
+       
 }
 //BD
-
 
 const SolarSystem = [
     { id: "SS1", nombre: "Mercury", Sats: 0, vida: false, distance: 0.39, imageLink: "../images/mercurio.jpg" },
@@ -161,41 +189,4 @@ butPl5.onclick = () => { choosePlanet('jupiter'), event.preventDefault() }
 butPl6.onclick = () => { choosePlanet('saturn'), event.preventDefault() }
 butPl7.onclick = () => { choosePlanet('uranus'), event.preventDefault() }
 butPl8.onclick = () => { choosePlanet('neptune'), event.preventDefault() }
-
-//NASA EXTRA DATA per PLANET
-
-// let planetName =
-    // let apiNasaURL = "https://images-api.nasa.gov/search?q=mercury"
-// const extraDataPlace = document.getElementById("showExtraData")
-// console.log(apiNasaURL);
-
-// function nasaAPIextraInfo(apiNasaURL) {
-//     fetch(apiNasaURL)
-//         .then((response) => response.json(), console.log("response ok"))
-//         .then((result) => {
-//             let res1 = result.collection.items[0].data[0].title
-//             let res2 = result.collection.items[1].links[0].href
-//             let res3 = result.collection.items[2].links[0].href
-//             let res4 = result.collection.items[3].links[0].href
-
-//             console.log(res1);
-//             console.log(res2);
-//             console.log(res3);
-//             console.log(res4);
-
-
-//             let col1 = document.getElementById("showExtraData")
-//             col1.innerHTML = `<br><br>
-//                             <h4 class="planet-text text-center">Other Pics</h4>
-//                               <br>
-//                               <br>
-//                               <img src="${res2}" style="width:100%;max-width:300px" class="imageOfTheDay img-fluid rounded-start text-bg-dark p-0"></img>
-//                               <img src="${res3}" id="extraPics" style="width:100%;max-width:300px" class=" p-0 imageOfTheDay img-fluid rounded-start text-bg-dark"></img>
-//                               <img src="${res4}" id="extraPics" style="width:100%;max-width:300px" class="p-0 imageOfTheDay img-fluid rounded-start text-bg-dark"></img>
-//             `
-//         })
-//     console.log("final forEach");
-// }
-
-
 

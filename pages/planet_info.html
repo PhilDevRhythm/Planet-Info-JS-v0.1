@@ -14,21 +14,24 @@
 </head>
 
 <body id="backgroundBLACK">
-    <h1 id="headerAPP">Planetary Info</h1>
-    <p id="headerAPP">This APP will let you understand a few things about our Universe</p>
+    <h1 id="headerAPP" class="display-1">Planetary Info</h1>
+    <p class="lead" id="headerAPP">This APP will let you understand a few things about our Solar System</p>
     <div class="text-center">
         <div class="container-fluid text-center" id="nav_container">
-            <button class="btn btn-dark" onclick="window.location.href='../index.html'" name="index" id="btn_home">Home</button>
-            <button class="btn btn-dark active" onclick="window.location.href='planet_info.html'" name="planet_info" id="btn_planet">Local Solar System info</button>
-            <button class="btn btn-dark" onclick="window.location.href='stellar_info.html'" name="stellar_info" id="btn_stellar">Local Stellar Information</button>
-            <button class="btn btn-dark" onclick="window.location.href='functions.html'" name="functions" id="btn_func">Functions</button>
-            <button class="btn btn-dark" onclick="window.location.href='advanced.html'" name="advanced" id="btn_advanced">Advanced</button>
-            <button class="btn btn-dark" onclick="window.location.href='savedata.html'" name="savedata" id="btn_savedata">Savedata</button>
+            <button class="btn btn-dark" onclick="window.location.href='../index.html'" name="index"
+                id="btn_home">Home</button>
+            <button class="btn btn-dark active" onclick="window.location.href='planet_info.html'" name="planet_info"
+                id="btn_planet">Local Solar System info</button>
+            <!-- <button class="btn btn-dark" onclick="window.location.href='stellar_info.html'" name="stellar_info"
+                id="btn_stellar">Local Stellar Information</button> -->
+            <button class="btn btn-dark" onclick="window.location.href='functions.html'" name="functions"
+                id="btn_func">Functions</button>
+          
         </div>
-            <div>
-                
-            </div>
+        <div>
+
         </div>
+    </div>
     </nav>
     <br>
     <div class="container text-center">
@@ -51,21 +54,6 @@
     <br>
     <hr>
     <br>
-    <!-- <div class="card container text-center text-bg-dark" id="showPlanets">
-        <div class="row text-bg-dark">
-            <div class="card col text-bg-dark">
-                <br>
-                <div class="img-fluid text-bg-dark card-img-top" id="showImage"></div>
-                <br>
-                <div class="col card-body">
-                    <div class="col">
-                        <div class="text-bg-dark card-text" id="showData2"></div>
-                        <div class="text-bg-dark card-body" id="showData1"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="mb-3 text-center" style="display: flex;justify-content: center; max-width:80%;align-items: center">
         <div class="row">
             <div class="col-md-2"></div>
@@ -81,11 +69,12 @@
                     <br>
                     <div class="card-text" id="showData3"></div>
                     <div class="card-text" id="showData4"></div>
-                    <!-- <small class="text-muted">Last updated 3 mins ago</small></p> -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="container text-center" id="showExtraData"><p class="planet-text">More data...</p></div>
+    <div class="container text-center" id="showExtraData">
+        <p class="planet-text">Click on the planet you want to know a little better...</p>
+    </div>
     <script src='../js/planetInfo.js'></script>
 </body>

@@ -13,16 +13,16 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body id="backgroundBLACK">
-    <h1 id="headerAPP">Planetary Info</h1>
-    <p id="headerAPP">This APP will let you understand a few things about our Universe</p>
+    <h1 id="headerAPP" class="display-1">Planetary Info</h1>
+    <p class="lead" id="headerAPP">This APP will let you understand a few things about our Solar System</p>
     <div class="text-center">
         <div class="container-fluid text-center" id="nav_container">
             <button class="btn btn-dark" onclick="window.location.href='../index.html'" name="index" id="btn_home">Home</button>
             <button class="btn btn-dark" onclick="window.location.href='planet_info.html'" name="planet_info" id="btn_planet">Local Solar System info</button>
-            <button class="btn btn-dark" onclick="window.location.href='stellar_info.html'" name="stellar_info" id="btn_stellar">Local Stellar Information</button>
+            <!-- <button class="btn btn-dark" onclick="window.location.href='stellar_info.html'" name="stellar_info" id="btn_stellar">Local Stellar Information</button> -->
             <button class="btn btn-dark active" onclick="window.location.href='functions.html'" name="functions" id="btn_func">Functions</button>
-            <button class="btn btn-dark" onclick="window.location.href='advanced.html'" name="advanced" id="btn_advanced">Advanced</button>
-            <button class="btn btn-dark" onclick="window.location.href='savedata.html'" name="savedata" id="btn_savedata">Savedata</button>
+            <!-- <button class="btn btn-dark" onclick="window.location.href='advanced.html'" name="advanced" id="btn_advanced">Advanced</button>
+            <button class="btn btn-dark" onclick="window.location.href='savedata.html'" name="savedata" id="btn_savedata">Savedata</button> -->
         </div>
             <div>
                 
@@ -76,13 +76,15 @@
                                 <p>Periodo de tiempo</p>
                                 <hr>
                                 <button class="button btn btn-info" id="calcEqDrake" onclick="getDrakeVars()">Calcular</button>
-                                <input type="submit" class="button btn btn-info" value="Almacenar" name="checkEqDrake"
-                                    id="checkEqDrake" onclick="dataCheck()"></button>
+                                <input type="submit" class="button btn btn-info" name="checkEqDrake" id="checkEqDrake"></button>
                                 <p> Calcular luego Almacenar</p>
                             </div>
                             <hr>
                             <br>
-                            <div>
+                        </div></div></div></div></form>
+                        <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqFinal"></div>
+                        <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqAlmacenar"></div>
+                            <div class="text-center">
                                 <h4>Referencia</h4>
                             </div>
                             <br>
@@ -115,7 +117,7 @@
             </div>
         </form>
     </div>
-    <div class="container text-center">
+    <div>
         <div class="row">
             <div class="card col">
                 <div>
@@ -134,32 +136,7 @@
             </div>
         </div>
     </div>
-    <div class="card container-xl">
-        <br>
-        <p> Ultimos datos guardados de<br>Equacion de Drake</p><br>
-        <br>
-        <!-- TABLA DE EXPORTACION -->
-        <table tag='tableDrakeData' id='tableDrake'>
-            <tr>
-                <th>Tasa de formacion de estrellas</th>
-                <th>Estrellas con planetas</th>
-                <th>Planetas potenciales</th>
-                <th>Vida inminente</th>
-                <th>Vida inteligente</th>
-                <th>Señales fuera de su planeta</th>
-                <th>Periodo de tiempo</th>
-            </tr>
-            <tr>
-                <td id="savedData0"></td>
-                <td id="savedData2"></td>
-                <td id="savedData4"></td>
-                <td id="savedData6"></td>
-                <td id="savedData8"></td>
-                <td id="savedData10"></td>
-                <td id="savedData12"></td>
-            </tr>
-        </table>
-    </div>
+    
 
     <!-- BOTONES DE EXPORTACION  -->
     <hr>
@@ -173,7 +150,7 @@
             <div class="col">
                 <div>
                     <br>
-                    <button class="btn btn-info" type="button" style="width:100px" id="butExpXSLX">Exportar a .xlsx</button>
+                    
                 </div>
             </div>
             <div class="col">
