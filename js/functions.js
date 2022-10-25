@@ -3,7 +3,7 @@ function DrakeEq(a, b, c, d, e, f, g) {
     let showResult = document.getElementById("resDrakeEqFinal")
     showResult.innerHTML = `<p> Valor N = ${resDrakeEq}
                             <br>
-                            <p> N = el número de civilizaciones de nuestra galaxia con las que podría ser posible la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual)
+                            <p> N = the number of civilizations of our galaxy with chances to establish communication between civilizations that are in our actual past cone light.
                             </p>`
     let resDrakeStore = JSON.stringify(resDrakeEq)
     localStorage.setItem("savedDrakeRes", resDrakeStore)
@@ -12,13 +12,13 @@ function DrakeEq(a, b, c, d, e, f, g) {
 
 }
 function getDrakeVars() {
-    varDrake1 = +document.getElementsByName("varDrake1")[0].value
-    varDrake2 = +document.getElementsByName("varDrake2")[0].value
-    varDrake3 = +document.getElementsByName("varDrake3")[0].value
-    varDrake4 = +document.getElementsByName("varDrake4")[0].value
-    varDrake5 = +document.getElementsByName("varDrake5")[0].value
-    varDrake6 = +document.getElementsByName("varDrake6")[0].value
-    varDrake7 = +document.getElementsByName("varDrake7")[0].value
+    varDrake1 = +document.getElementsByName("varDrake1").value
+    varDrake2 = +document.getElementsByName("varDrake2").value
+    varDrake3 = +document.getElementsByName("varDrake3").value
+    varDrake4 = +document.getElementsByName("varDrake4").value
+    varDrake5 = +document.getElementsByName("varDrake5").value
+    varDrake6 = +document.getElementsByName("varDrake6").value
+    varDrake7 = +document.getElementsByName("varDrake7").value
 
     DrakeEq(varDrake1, varDrake2, varDrake3, varDrake4, varDrake5, varDrake6, varDrake7)
     let arraydata = []
@@ -44,16 +44,16 @@ function dataCheck() {
     let savedData = localStorage.getItem("savedDrakeVars")
     checkResult.innerHTML =`    <div class="container-xl text-center text-bg-dark">
                                 <br>
-                                <p> Ultimos datos guardados de<br>Equacion de Drake</p><br>
+                                <p> Latest saved data <br>Drake's equation</p><br>
                                 <table tag='tableDrakeData' id='tableDrake'>
                                     <tr>
-                                        <th>Tasa de formacion de estrellas</th>
-                                        <th>Estrellas con planetas</th>
-                                        <th>Planetas potenciales</th>
-                                        <th>Vida inminente</th>
-                                        <th>Vida inteligente</th>
-                                        <th>Señales fuera de su planeta</th>
-                                        <th>Periodo de tiempo</th>
+                                        <th>Star formation rate</th>
+                                        <th>% of Star with planets</th>
+                                        <th>% of fully formed planets</th>
+                                        <th>Chance to have life</th>
+                                        <th>Chance to have intelligent life</th>
+                                        <th>Chance to have comunications to space</th>
+                                        <th>Time interval number</th>
                                     </tr>
                                     <tr>
                                         <td id="savedData0"></td>
@@ -66,7 +66,7 @@ function dataCheck() {
                                     </tr>
                                 </table>
                                 <br>
-                                <button class="btn btn-info" type="button" style="width:100px" id="butExpXSLX">Exportar a .xlsx</button>
+                                <button class="btn btn-info" type="button" style="width:100px" id="butExpXSLX">Export to .xlsx</button>
                                 <br>
                                 <br>
                             </div>`

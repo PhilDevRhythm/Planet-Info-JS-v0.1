@@ -32,11 +32,11 @@
     </div>
     </nav>
     <br>
-    <div class="card text-bg-dark mb-3">
+    <div class="card text-bg-dark mb-3 container-xl" style="width: 85%">
         <form class="text-center" name="drakeForm" id="drakeForm">
             <br>
             <br>
-            <div class="container text-center">
+            <div class=" text-center">
                 <div class="row">
                     <div class="col">
 
@@ -44,7 +44,7 @@
                     <div class="col" style="align-content:center">
                         <img src="../images/drakeEq.svg" id="nav-link" style="align-self: center"
                             class="card text-center text-bg-light"></img>
-                        <div class="card-header text-center lead">Drake's Formula</div>
+                        <div class="card-header text-center lead">Drake's Equation</div>
                     </div>
                     <div class="col">
 
@@ -80,15 +80,15 @@
                                 <p class="lead">Chance to have comunications to space</p>
                             </div>
                             <div class="col">
-                                <input class="input_form" type="number" name="varDrake7" min="0" max="7" width="10"
-                                    placeholder="4">
+                                <input class="input_form" type="number" name="varDrake7" min="1" max="7" width="10"
+                                    placeholder="1 - 7">
                                 <p class="lead">Time interval number</p>
                                 <hr>
                                 <button class="button btn btn-info" id="calcEqDrake"
-                                    onclick="getDrakeVars()">Calcular</button>
-                                <input type="submit" class="button btn btn-info" name="checkEqDrake"
-                                    id="checkEqDrake"></button>
-                                <p class="lead"> *Calcular luego almacenar</p>
+                                    onclick="getDrakeVars()">Exec</button>
+                                <button class="button btn btn-info" class="button btn btn-info" name="checkEqDrake"
+                                    id="checkEqDrake">Save</button>
+                                <p class="lead"> *Exec then Save</p>
                             </div>
                             <hr>
                             <br>
@@ -100,31 +100,19 @@
         <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqFinal"></div>
         <div class="card rounded-4 text-bg-dark mb-3 text-center border border-white" id="resDrakeEqAlmacenar"></div>
         <div class="text-center">
-            <h4>Referencia</h4>
+            <h4>Reference</h4>
         </div>
         <br>
-        <p class="card text-bg-dark mb-3 lead"> N = el número de civilizaciones de nuestra galaxia
-            con
-            las que
-            podría ser posible
-            la comunicación (es decir, que se encuentran en nuestro cono de luz pasado actual )
-            R∗ = la tasa promedio de formación de estrellas en nuestra Galaxia
-            fp = la fracción de esas estrellas que tienen planetas
-            ne = el número promedio de planetas que potencialmente pueden albergar vida por cada
-            estrella
-            que tiene planetas
-            fl = la fracción de planetas que podrían albergar vida que realmente desarrollan
-            vida en
-            algún
-            momento
-            fi = la fracción de planetas con vida que realmente desarrollan vida inteligente
-            (civilizaciones)
-            fc = la fracción de civilizaciones que desarrollan una tecnología que libera signos
-            detectables
-            de su existencia en el espacio
-            L = el período de tiempo durante el cual dichas civilizaciones emiten señales
-            detectables al
-            espacio</p>
+        <p class="card text-bg-dark mb-3 lead"> N = the number of civilizations in the Milky Way galaxy with which communication might be possible (i.e. which are on the current past light cone);
+            and
+            
+            R∗ = the average rate of star formation in our Galaxy
+            fp = the fraction of those stars that have planets
+            ne = the average number of planets that can potentially support life per star that has planets
+            fl = the fraction of planets that could support life that actually develop life at some point
+            fi = the fraction of planets with life that actually go on to develop intelligent life (civilizations)
+            fc = the fraction of civilizations that develop a technology that releases detectable signs of their existence into space
+            L = the length of time for which such civilizations release detectable signals into space</p>
         <br>
     </div>
     </div>
