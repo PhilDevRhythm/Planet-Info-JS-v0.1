@@ -1,50 +1,55 @@
 function DrakeEq(a, b, c, d, e, f, g) {
+
+
+
+    a = document.getElementById("varDrake0").value;
+    b = document.getElementById("varDrake1").value;
+    c = document.getElementById("varDrake2").value;
+    d = document.getElementById("varDrake3").value;
+    e = document.getElementById("varDrake4").value;
+    f = document.getElementById("varDrake5").value;
+    g = document.getElementById("varDrake6").value;
+
     let resDrakeEq = a * b * c * d * e * f * g
+
+    let saveDrakeForm = []
+    saveDrakeForm.push(a)
+    saveDrakeForm.push(b)
+    saveDrakeForm.push(c)
+    saveDrakeForm.push(d)
+    saveDrakeForm.push(e)
+    saveDrakeForm.push(f)
+    saveDrakeForm.push(g)
+    saveDrakeForm.push(resDrakeEq)
+
+    let convert = JSON.stringify(saveDrakeForm)
+    localStorage.setItem("savedDrakeForm", convert)
+    
     let showResult = document.getElementById("resDrakeEqFinal")
-    showResult.innerHTML = `<p> Valor N = ${resDrakeEq}
+    showResult.innerHTML = `<p class="lead"> N value = ${resDrakeEq}
                             <br>
-                            <p> N = the number of civilizations of our galaxy with chances to establish communication between civilizations that are in our actual past cone light.
+                            <p class="lead"> N = the number of civilizations of our galaxy with chances to establish communication between civilizations that are in our actual past cone light.
                             </p>`
-    let resDrakeStore = JSON.stringify(resDrakeEq)
-    localStorage.setItem("savedDrakeRes", resDrakeStore)
-    event.preventDefault()
-    return
-
-}
-function getDrakeVars() {
-    varDrake1 = +document.getElementsByName("varDrake1").value
-    varDrake2 = +document.getElementsByName("varDrake2").value
-    varDrake3 = +document.getElementsByName("varDrake3").value
-    varDrake4 = +document.getElementsByName("varDrake4").value
-    varDrake5 = +document.getElementsByName("varDrake5").value
-    varDrake6 = +document.getElementsByName("varDrake6").value
-    varDrake7 = +document.getElementsByName("varDrake7").value
-
-    DrakeEq(varDrake1, varDrake2, varDrake3, varDrake4, varDrake5, varDrake6, varDrake7)
-    let arraydata = []
-    arraydata.push(+varDrake1, +varDrake2, +varDrake3, +varDrake4, +varDrake5, +varDrake6, +varDrake7)
-    arraydataConverted = [JSON.stringify(arraydata[0]), JSON.stringify(arraydata[1]), JSON.stringify(arraydata[2]), JSON.stringify(arraydata[3]), JSON.stringify(arraydata[4]), JSON.stringify(arraydata[5])]
-    localStorage.setItem("savedDrakeVars", arraydataConverted)
     event.preventDefault()
 
-    return
 }
 
 let formButtonCalc = document.getElementById("calcEqDrake")
 let formButtonSave = document.getElementById("checkEqDrake")
 
-formButtonCalc.onclick = () => { getDrakeVars(), event.preventDefault() }
+formButtonCalc.onclick = () => { DrakeEq(), event.preventDefault() }
 formButtonSave.onclick = () => { dataCheck(), event.preventDefault() }
 
 
 function dataCheck() {
-    arraydata = localStorage.getItem("savedDrakevars")
-    captureDrakeData((localStorage.getItem("savedDrakeVars")[1]), (localStorage.getItem("savedDrakeVars")[3]), (localStorage.getItem("savedDrakeVars")[5]), (localStorage.getItem("savedDrakeVars")[7]), (localStorage.getItem("savedDrakeVars")[0]), (localStorage.getItem("savedDrakeVars")[2]), (localStorage.getItem("savedDrakeVars")[4]))
+    tempdata = localStorage.getItem("savedDrakeForm")
+    testdata = JSON.parse(tempdata)
+    console.log(tempdata);
+    console.log(testdata);
     let checkResult = document.getElementById("resDrakeEqAlmacenar");
-    let savedData = localStorage.getItem("savedDrakeVars")
-    checkResult.innerHTML =`    <div class="container-xl text-center text-bg-dark">
+    checkResult.innerHTML = `    <div class="container-xl text-center text-bg-dark">
                                 <br>
-                                <p> Latest saved data <br>Drake's equation</p><br>
+                                <pclass="lead"> Latest saved data <br>Drake's equation</p><br>
                                 <table tag='tableDrakeData' id='tableDrake'>
                                     <tr>
                                         <th>Star formation rate</th>
@@ -54,15 +59,17 @@ function dataCheck() {
                                         <th>Chance to have intelligent life</th>
                                         <th>Chance to have comunications to space</th>
                                         <th>Time interval number</th>
+                                        <th>Drake Equation Result</th>
                                     </tr>
                                     <tr>
                                         <td id="savedData0"></td>
+                                        <td id="savedData1"></td>
                                         <td id="savedData2"></td>
+                                        <td id="savedData3"></td>
                                         <td id="savedData4"></td>
+                                        <td id="savedData5"></td>
                                         <td id="savedData6"></td>
-                                        <td id="savedData8"></td>
-                                        <td id="savedData10"></td>
-                                        <td id="savedData12"></td>
+                                        <td id="savedData7"></td>
                                     </tr>
                                 </table>
                                 <br>
@@ -71,59 +78,38 @@ function dataCheck() {
                                 <br>
                             </div>`
     let tableData0 = document.getElementById("savedData0")
-    tableData0.innerHTML = savedData[0]
-    let tableData1 = document.getElementById("savedData2")
-    tableData1.innerHTML = savedData[2]
-    let tableData2 = document.getElementById("savedData4")
-    tableData2.innerHTML = savedData[4]
-    let tableData3 = document.getElementById("savedData6")
-    tableData3.innerHTML = savedData[6]
-    let tableData4 = document.getElementById("savedData8")
-    tableData4.innerHTML = savedData[8]
-    let tableData5 = document.getElementById("savedData10")
-    tableData5.innerHTML = savedData[10]
-    let tableData6 = document.getElementById("savedData12")
-    tableData6.innerHTML = savedData[12]
+    tableData0.innerHTML = testdata[0]
+    let tableData1 = document.getElementById("savedData1")
+    tableData1.innerHTML = testdata[1]
+    let tableData2 = document.getElementById("savedData2")
+    tableData2.innerHTML = testdata[2]
+    let tableData3 = document.getElementById("savedData3")
+    tableData3.innerHTML = testdata[3]
+    let tableData4 = document.getElementById("savedData4")
+    tableData4.innerHTML = testdata[4]
+    let tableData5 = document.getElementById("savedData5")
+    tableData5.innerHTML = testdata[5]
+    let tableData6 = document.getElementById("savedData6")
+    tableData6.innerHTML = testdata[6]
+    let tableData7 = document.getElementById("savedData7")
+    tableData7.innerHTML = testdata[7]
+
     let buttonExportXLSX = document.getElementById("butExpXSLX")
     buttonExportXLSX.onclick = () => { excel2() }
 
-return
-}
-
-function captureDrakeData(a, b, c, d, e, f, g, resDrakeEq) {
-    var dataStorage = []
-    dataStorage[0] = parseInt(a)
-    dataStorage[1] = parseInt(b)
-    dataStorage[2] = parseInt(c)
-    dataStorage[3] = parseInt(d)
-    dataStorage[4] = parseInt(e)
-    dataStorage[5] = parseInt(f)
-    dataStorage[6] = parseInt(g)
-    dataStorage[7] = parseInt(resDrakeEq)
-    event.preventDefault()
-}
-
-
-
-
-//EXPORT FUNCTIONS
-function exportXLSX() {
-    let tableExportVar = TableExport(document.getElementsByTagName('tableDrakeData'))
-    return tableExportVar
+    return
 }
 
 // EXPORT BUTTONS
 
 
 function excel2() {
-    console.log("entre");
     $("#tableDrake").table2excel({
         exclude: ".noExl",
         name: "Drake-Table-result",
         filename: "Planetary-info-drakeTable",
         fileext: ".xls"
     });
-    console.log("sali");
 };
 
 
